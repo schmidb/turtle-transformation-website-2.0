@@ -161,11 +161,27 @@ const dataAiSchema = {
         <!-- Advisor 1: Miriam Schmidberger -->
         <div class="rounded-2xl bg-sand-50/70 p-8 sm:p-10 border border-sand-200/80 flex flex-col justify-between shadow-sm">
           <div>
-            <div class="mb-4">
-              <div class="text-xs uppercase tracking-wider font-semibold text-turtle-700">
-                Industry AI Advisor • Adaptability Leader
+            <div class="flex flex-col sm:flex-row items-start gap-5 mb-6 pb-6 border-b border-sand-200/60">
+              <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border border-sand-200 shadow-sm flex-shrink-0 bg-sand-100">
+                <picture>
+                  <source srcset={getRelativePath('/images/miriam-schmidberger.webp')} type="image/webp" />
+                  <img 
+                    src={getRelativePath('/images/miriam-schmidberger.jpg')} 
+                    alt="Miriam Schmidberger" 
+                    class="w-full h-full object-cover object-top" 
+                    loading="lazy" 
+                    width="676" 
+                    height="1000" 
+                  />
+                </picture>
               </div>
-              <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1">Miriam Schmidberger</h3>
+              <div>
+                <div class="text-xs uppercase tracking-wider font-semibold text-turtle-700">
+                  Industry AI Advisor • Adaptability Leader
+                </div>
+                <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1">Miriam Schmidberger</h3>
+                <p class="text-xs text-sand-600 mt-1">Munster Technological University (MTU) Kerry • Certified AQai</p>
+              </div>
             </div>
 
             <p class="text-xs sm:text-sm text-sand-800 leading-relaxed mb-6">
@@ -200,11 +216,27 @@ const dataAiSchema = {
         <!-- Advisor 2: Dr. Markus Schmidberger -->
         <div class="rounded-2xl bg-sand-50/70 p-8 sm:p-10 border border-sand-200/80 flex flex-col justify-between shadow-sm">
           <div>
-            <div class="mb-4">
-              <div class="text-xs uppercase tracking-wider font-semibold text-turtle-700">
-                Data & AI Strategist • Former Director
+            <div class="flex flex-col sm:flex-row items-start gap-5 mb-6 pb-6 border-b border-sand-200/60">
+              <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border border-sand-200 shadow-sm flex-shrink-0 bg-sand-100">
+                <picture>
+                  <source srcset={getRelativePath('/images/markus-schmidberger.webp')} type="image/webp" />
+                  <img 
+                    src={getRelativePath('/images/markus-schmidberger.jpg')} 
+                    alt="Dr. Markus Schmidberger" 
+                    class="w-full h-full object-cover object-top" 
+                    loading="lazy" 
+                    width="772" 
+                    height="1000" 
+                  />
+                </picture>
               </div>
-              <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1">Dr. Markus Schmidberger</h3>
+              <div>
+                <div class="text-xs uppercase tracking-wider font-semibold text-turtle-700">
+                  Data & AI Strategist • Former Director
+                </div>
+                <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1">Dr. Markus Schmidberger</h3>
+                <p class="text-xs text-sand-600 mt-1">Ex-Scout24 Director of Data • Ex-AWS ProServe • PhD</p>
+              </div>
             </div>
 
             <p class="text-xs sm:text-sm text-sand-800 leading-relaxed mb-6">
@@ -387,3 +419,4 @@ const dataAiSchema = {
   </section>
 
 </Layout>
+

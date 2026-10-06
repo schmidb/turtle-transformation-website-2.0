@@ -25,20 +25,14 @@ const navItems = [
       
       <!-- Brand Logo -->
       <a href={homeHref} class="flex items-center gap-3 group focus:outline-none">
-        <div class="w-9 h-9 rounded-xl bg-turtle-900 flex items-center justify-center text-turtle-200 shadow-sm group-hover:scale-105 transition-transform duration-200">
-          <svg class="w-5 h-5" width="20" height="20" viewBox="0 0 64 64" fill="none">
-            <polygon points="32,18 42,24 42,36 32,42 22,36 22,24" fill="#23574B" stroke="#96C8BA" stroke-width="2" />
-            <circle cx="32" cy="30" r="3" fill="#E2DDCB" />
-          </svg>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif text-lg tracking-tight font-semibold text-turtle-950 group-hover:text-turtle-800 transition-colors leading-tight">
-            Turtle Transformation
-          </span>
-          <span class="text-[10px] tracking-widest uppercase font-medium text-sand-600">
-            The Authentic Leader Academy
-          </span>
-        </div>
+        <img 
+          src={getRelativePath('/images/turtle-logo.png')} 
+          alt="Turtle Transformation - The Authentic Leader Academy" 
+          class="h-11 sm:h-12 w-auto object-contain group-hover:opacity-90 transition-opacity"
+          width="180"
+          height="76"
+          loading="eager"
+        />
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -137,3 +131,4 @@ const navItems = [
     });
   }
 </script>
+

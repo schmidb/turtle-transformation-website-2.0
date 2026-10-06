@@ -11,15 +11,16 @@ const year = 2026;
       
       <!-- Brand Column -->
       <div class="md:col-span-2 space-y-4">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-turtle-900 flex items-center justify-center text-turtle-200">
-            <svg class="w-5 h-5" width="20" height="20" viewBox="0 0 64 64" fill="none">
-              <polygon points="32,18 42,24 42,36 32,42 22,36 22,24" fill="#23574B" stroke="#96C8BA" stroke-width="2" />
-              <circle cx="32" cy="30" r="3" fill="#E2DDCB" />
-            </svg>
-          </div>
-          <span class="font-serif text-lg font-normal text-white">Turtle Transformation</span>
-        </div>
+        <a href={getRelativePath('/')} class="inline-block focus:outline-none">
+          <img 
+            src={getRelativePath('/images/turtle-logo-white.png')} 
+            alt="Turtle Transformation - The Authentic Leader Academy" 
+            class="h-12 w-auto object-contain hover:opacity-90 transition-opacity"
+            width="180"
+            height="76"
+            loading="lazy"
+          />
+        </a>
         <p class="text-xs text-sand-400 max-w-sm leading-relaxed">
           The Authentic Leader Academy empowers senior executives, engineering leaders, and founders to shift from reactive overwork to grounded, calm effectiveness.
         </p>
@@ -76,3 +77,4 @@ const year = 2026;
     </div>
   </div>
 </footer>
+
