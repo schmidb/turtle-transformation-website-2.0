@@ -1,6 +1,7 @@
 ---
 // src/pages/data-ai-consulting.astro
 import Layout from '../layouts/Layout.astro';
+import { getRelativePath } from '../utils/paths';
 
 const dataAiSchema = {
   '@context': 'https://schema.org',
@@ -54,13 +55,13 @@ const dataAiSchema = {
           href="mailto:info@turtletrafo.de?subject=Enterprise%20Data%20%26%20AI%20Consulting%20Inquiry" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-turtle-400 focus:ring-offset-2 min-h-[52px]"
         >
-          <svg class="w-5 h-5 text-turtle-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-5 h-5 text-turtle-800" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
           <span>Email Inquiry: info@turtletrafo.de</span>
         </a>
         <a 
-          href="/about" 
+          href={getRelativePath('/about')} 
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-800/80 hover:bg-turtle-800 active:bg-turtle-700 transition-all border border-turtle-700 min-h-[52px]"
         >
           Learn About Markus’s Journey
@@ -69,7 +70,7 @@ const dataAiSchema = {
 
       <!-- Status Notice Banner -->
       <div class="max-w-2xl mx-auto p-4 rounded-xl bg-turtle-900/90 border border-turtle-700/80 text-sand-300 text-xs sm:text-sm flex items-center justify-center gap-3">
-        <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="w-5 h-5 text-accent flex-shrink-0" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <span>
@@ -271,13 +272,13 @@ const dataAiSchema = {
           href="mailto:info@turtletrafo.de?subject=Strategic%20Data%20%26%20AI%20Advisory%20Inquiry" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-lg transition-all min-h-[52px]"
         >
-          <svg class="w-5 h-5 text-turtle-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-5 h-5 text-turtle-800" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
           <span>Email Inquiry to info@turtletrafo.de</span>
         </a>
         <a 
-          href="/" 
+          href={getRelativePath('/')} 
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-900 hover:bg-turtle-800 border border-turtle-700 transition-all min-h-[52px]"
         >
           View 12-Month Coaching Program

@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Build static website
         run: npm run build
+        env:
+          USE_CUSTOM_DOMAIN: ${{ vars.USE_CUSTOM_DOMAIN || 'false' }}
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,6 +1,7 @@
 ---
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
+import { getRelativePath } from '../utils/paths';
 
 const coachingServiceSchema = {
   '@context': 'https://schema.org',
@@ -109,7 +110,7 @@ const faqSchema = {
           href="mailto:info@turtletrafo.de?subject=12-Month%20Coaching%20Application%20-%20Discovery%20Call" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-white bg-turtle-800 hover:bg-turtle-900 active:bg-turtle-950 shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-turtle-600 focus:ring-offset-2 min-h-[52px]"
         >
-          <svg class="w-5 h-5 text-turtle-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-5 h-5 text-turtle-200" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
           <span>Apply via Email: info@turtletrafo.de</span>
@@ -697,7 +698,7 @@ const faqSchema = {
   <section class="py-20 bg-turtle-950 text-sand-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="w-12 h-12 rounded-2xl bg-turtle-800 text-turtle-200 border border-turtle-700 flex items-center justify-center mx-auto mb-6">
-        <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none">
+        <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 64 64" fill="none">
           <polygon points="32,18 42,24 42,36 32,42 22,36 22,24" fill="#23574B" stroke="#96C8BA" stroke-width="2" />
           <circle cx="32" cy="30" r="3" fill="#E2DDCB" />
         </svg>
@@ -718,7 +719,7 @@ const faqSchema = {
           Book Discovery Call via info@turtletrafo.de
         </a>
         <a 
-          href="/about" 
+          href={getRelativePath('/about')} 
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-900 hover:bg-turtle-800 border border-turtle-700 transition-all min-h-[52px]"
         >
           Read Our 20-Year Story

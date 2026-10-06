@@ -1,6 +1,7 @@
 ---
 // src/pages/about.astro
 import Layout from '../layouts/Layout.astro';
+import { getRelativePath } from '../utils/paths';
 
 const aboutPageSchema = {
   '@context': 'https://schema.org',
@@ -232,7 +233,7 @@ const aboutPageSchema = {
           </p>
           <div class="pt-2">
             <a 
-              href="/" 
+              href={getRelativePath('/')} 
               class="inline-flex items-center gap-2 text-sm font-semibold text-turtle-800 hover:text-turtle-900 underline underline-offset-4"
             >
               <span>Explore Miriam's 12-Month Executive Coaching Program</span>
@@ -255,7 +256,7 @@ const aboutPageSchema = {
           </p>
           <div class="pt-2">
             <a 
-              href="/data-ai-consulting" 
+              href={getRelativePath('/data-ai-consulting')} 
               class="inline-flex items-center gap-2 text-sm font-semibold text-turtle-800 hover:text-turtle-900 underline underline-offset-4"
             >
               <span>Explore Markus's Enterprise Data & AI Consulting</span>
@@ -301,7 +302,7 @@ const aboutPageSchema = {
           href="mailto:info@turtletrafo.de?subject=General%20Inquiry%20-%20Turtle%20Transformation" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-lg transition-all min-h-[52px]"
         >
-          <svg class="w-5 h-5 text-turtle-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-5 h-5 text-turtle-800" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
           <span>Email Us: info@turtletrafo.de</span>

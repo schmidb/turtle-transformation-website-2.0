@@ -1,15 +1,21 @@
 ---
 // src/components/Header.astro
+import { getRelativePath } from '../utils/paths';
+
 interface Props {
   currentPath?: string;
 }
 
 const { currentPath = '/' } = Astro.props;
 
+const homeHref = getRelativePath('/');
+const aboutHref = getRelativePath('/about');
+const consultingHref = getRelativePath('/data-ai-consulting');
+
 const navItems = [
-  { name: '12-Month Coaching', href: '/' },
-  { name: 'Our Journey & Story', href: '/about' },
-  { name: 'Data & AI Consulting', href: '/data-ai-consulting' },
+  { name: '12-Month Coaching', href: homeHref },
+  { name: 'Our Journey & Story', href: aboutHref },
+  { name: 'Data & AI Consulting', href: consultingHref },
 ];
 ---
 
@@ -18,9 +24,9 @@ const navItems = [
     <div class="flex items-center justify-between h-20">
       
       <!-- Logo & Brand Identity -->
-      <a href="/" class="flex items-center gap-3.5 group focus:outline-none">
+      <a href={homeHref} class="flex items-center gap-3.5 group focus:outline-none">
         <div class="w-10 h-10 rounded-xl bg-turtle-900 flex items-center justify-center text-turtle-200 border border-turtle-700 shadow-sm group-hover:scale-105 transition-transform duration-200">
-          <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none">
+          <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 64 64" fill="none">
             <polygon points="32,18 42,24 42,36 32,42 22,36 22,24" fill="#23574B" stroke="#96C8BA" stroke-width="2" />
             <circle cx="32" cy="30" r="3" fill="#E2DDCB" />
           </svg>
@@ -38,7 +44,7 @@ const navItems = [
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-8">
         {navItems.map((item) => {
-          const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+          const isActive = currentPath === item.href || (item.href !== homeHref && currentPath.startsWith(item.href));
           return (
             <a
               href={item.href}
@@ -73,10 +79,10 @@ const navItems = [
           aria-expanded="false"
           aria-label="Toggle menu"
         >
-          <svg class="h-6 w-6" id="menu-icon-closed" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="h-6 w-6" width="24" height="24" id="menu-icon-closed" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg class="h-6 w-6 hidden" id="menu-icon-opened" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="h-6 w-6 hidden" width="24" height="24" id="menu-icon-opened" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -89,7 +95,7 @@ const navItems = [
   <div class="md:hidden hidden bg-sand-50 border-b border-sand-200" id="mobile-menu">
     <div class="px-4 pt-2 pb-4 space-y-2">
       {navItems.map((item) => {
-        const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+        const isActive = currentPath === item.href || (item.href !== homeHref && currentPath.startsWith(item.href));
         return (
           <a
             href={item.href}

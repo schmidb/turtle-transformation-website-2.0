@@ -1,5 +1,7 @@
 ---
 // src/components/Footer.astro
+import { getRelativePath } from '../utils/paths';
+
 const year = 2026;
 ---
 
@@ -11,7 +13,7 @@ const year = 2026;
       <div class="md:col-span-2 space-y-4">
         <div class="flex items-center gap-3">
           <div class="w-8 h-8 rounded-lg bg-turtle-800 flex items-center justify-center text-turtle-200 border border-turtle-700">
-            <svg class="w-5 h-5" viewBox="0 0 64 64" fill="none">
+            <svg class="w-5 h-5" width="20" height="20" viewBox="0 0 64 64" fill="none">
               <polygon points="32,18 42,24 42,36 32,42 22,36 22,24" fill="#23574B" stroke="#96C8BA" stroke-width="2" />
               <circle cx="32" cy="30" r="3" fill="#E2DDCB" />
             </svg>
@@ -31,16 +33,16 @@ const year = 2026;
         <h3 class="text-xs font-semibold tracking-wider uppercase text-turtle-300">Offerings</h3>
         <ul class="space-y-2 text-sm text-sand-300">
           <li>
-            <a href="/" class="hover:text-white transition-colors">12-Month Executive Coaching</a>
+            <a href={getRelativePath('/')} class="hover:text-white transition-colors">12-Month Executive Coaching</a>
           </li>
           <li>
-            <a href="/data-ai-consulting" class="hover:text-white transition-colors flex items-center gap-1.5">
+            <a href={getRelativePath('/data-ai-consulting')} class="hover:text-white transition-colors flex items-center gap-1.5">
               <span>Data & AI Consulting</span>
               <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.2 rounded bg-turtle-800 text-turtle-200">New</span>
             </a>
           </li>
           <li>
-            <a href="/about" class="hover:text-white transition-colors">Our 20-Year Journey</a>
+            <a href={getRelativePath('/about')} class="hover:text-white transition-colors">Our 20-Year Journey</a>
           </li>
           <li>
             <a href="mailto:info@turtletrafo.de" class="hover:text-white transition-colors">Contact & Inquiries</a>
@@ -74,8 +76,8 @@ const year = 2026;
     <div class="mt-12 pt-8 border-t border-turtle-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-400 gap-4">
       <p>© {year} Turtle Transformation Limited. All rights reserved.</p>
       <div class="flex items-center gap-6">
-        <a href="/imprint" class="hover:text-sand-200 transition-colors">Imprint (Legal Notice)</a>
-        <a href="/privacy" class="hover:text-sand-200 transition-colors">Privacy Policy</a>
+        <a href={getRelativePath('/imprint')} class="hover:text-sand-200 transition-colors">Imprint (Legal Notice)</a>
+        <a href={getRelativePath('/privacy')} class="hover:text-sand-200 transition-colors">Privacy Policy</a>
       </div>
     </div>
   </div>
