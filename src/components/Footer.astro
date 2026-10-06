@@ -5,79 +5,73 @@ import { getRelativePath } from '../utils/paths';
 const year = 2026;
 ---
 
-<footer class="bg-turtle-950 text-sand-200 mt-auto border-t border-turtle-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<footer class="bg-turtle-950 text-sand-300 mt-auto border-t border-turtle-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
       
-      <!-- Brand & Mission Column -->
+      <!-- Brand Column -->
       <div class="md:col-span-2 space-y-4">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-turtle-800 flex items-center justify-center text-turtle-200 border border-turtle-700">
+          <div class="w-8 h-8 rounded-lg bg-turtle-900 flex items-center justify-center text-turtle-200">
             <svg class="w-5 h-5" width="20" height="20" viewBox="0 0 64 64" fill="none">
               <polygon points="32,18 42,24 42,36 32,42 22,36 22,24" fill="#23574B" stroke="#96C8BA" stroke-width="2" />
               <circle cx="32" cy="30" r="3" fill="#E2DDCB" />
             </svg>
           </div>
-          <span class="font-serif text-lg font-semibold text-sand-50">Turtle Transformation</span>
+          <span class="font-serif text-lg font-normal text-white">Turtle Transformation</span>
         </div>
-        <p class="text-sm text-sand-300 max-w-md leading-relaxed">
+        <p class="text-xs text-sand-400 max-w-sm leading-relaxed">
           The Authentic Leader Academy empowers senior executives, engineering leaders, and founders to shift from reactive overwork to grounded, calm effectiveness.
         </p>
-        <blockquote class="text-xs italic text-turtle-300/90 border-l-2 border-turtle-600 pl-3 py-1">
+        <p class="text-xs italic text-turtle-300/80">
           &ldquo;Slow is smooth, and smooth is fast. Change starts from the inside out.&rdquo;
-        </blockquote>
+        </p>
       </div>
 
       <!-- Offerings & Navigation -->
       <div class="space-y-3">
-        <h3 class="text-xs font-semibold tracking-wider uppercase text-turtle-300">Offerings</h3>
-        <ul class="space-y-2 text-sm text-sand-300">
+        <div class="text-xs font-semibold tracking-wider uppercase text-white">Navigation</div>
+        <ul class="space-y-2 text-xs text-sand-400">
           <li>
             <a href={getRelativePath('/')} class="hover:text-white transition-colors">12-Month Executive Coaching</a>
           </li>
           <li>
-            <a href={getRelativePath('/data-ai-consulting')} class="hover:text-white transition-colors flex items-center gap-1.5">
-              <span>Data & AI Advisory</span>
-              <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.2 rounded bg-turtle-800 text-turtle-200">New</span>
+            <a href={getRelativePath('/data-ai-consulting')} class="hover:text-white transition-colors">
+              Data & AI Advisory
             </a>
           </li>
           <li>
             <a href={getRelativePath('/about')} class="hover:text-white transition-colors">Our 20-Year Journey</a>
           </li>
           <li>
-            <a href="mailto:info@turtletrafo.de" class="hover:text-white transition-colors">Contact & Inquiries</a>
+            <a href="mailto:info@turtletrafo.de" class="hover:text-white transition-colors">Direct Inquiries</a>
           </li>
         </ul>
       </div>
 
       <!-- Legal & Company Information -->
       <div class="space-y-3">
-        <h3 class="text-xs font-semibold tracking-wider uppercase text-turtle-300">Company & Entity</h3>
-        <address class="not-italic text-xs text-sand-400 space-y-1.5 leading-relaxed">
+        <div class="text-xs font-semibold tracking-wider uppercase text-white">Company Entity</div>
+        <address class="not-italic text-xs text-sand-400 space-y-1 leading-relaxed">
           <p class="font-medium text-sand-200">Turtle Transformation Limited</p>
           <p>Drom Upper, Glenbeigh</p>
           <p>Co. Kerry, V93 F6X0, Ireland</p>
-          <p class="pt-1">
-            <span class="text-sand-500">VAT ID:</span> IE 4123186QH
-          </p>
+          <p class="pt-1 text-sand-500">VAT ID: IE 4123186QH</p>
           <p>
-            <span class="text-sand-500">Email:</span> 
-            <a href="mailto:info@turtletrafo.de" class="hover:text-turtle-300 underline underline-offset-2">info@turtletrafo.de</a>
+            <a href="mailto:info@turtletrafo.de" class="hover:text-white underline underline-offset-2">info@turtletrafo.de</a>
           </p>
-          <p>
-            <span class="text-sand-500">Phone:</span> +353 87 227 5723
-          </p>
+          <p>+353 87 227 5723</p>
         </address>
       </div>
 
     </div>
 
     <!-- Bottom Bar -->
-    <div class="mt-12 pt-8 border-t border-turtle-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-400 gap-4">
+    <div class="mt-12 pt-8 border-t border-turtle-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-500 gap-4">
       <p>© {year} Turtle Transformation Limited. All rights reserved.</p>
       <div class="flex items-center gap-6">
-        <a href={getRelativePath('/imprint')} class="hover:text-sand-200 transition-colors">Imprint (Legal Notice)</a>
-        <a href={getRelativePath('/privacy')} class="hover:text-sand-200 transition-colors">Privacy Policy</a>
+        <a href={getRelativePath('/imprint')} class="hover:text-sand-300 transition-colors">Imprint & Legal Notice</a>
+        <a href={getRelativePath('/privacy')} class="hover:text-sand-300 transition-colors">Privacy Policy</a>
       </div>
     </div>
   </div>

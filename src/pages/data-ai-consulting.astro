@@ -42,107 +42,99 @@ const dataAiSchema = {
 >
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-turtle-950 via-turtle-900 to-turtle-950 text-sand-100">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 bg-turtle-950 text-sand-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
-      <!-- Pre-header Pill -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-turtle-800/80 border border-turtle-700 text-turtle-200 text-xs sm:text-sm font-medium mb-8 shadow-sm">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Executive Technology & AI Advisory • Dual Leadership</span>
+      <!-- Pre-header Label -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-turtle-900 border border-turtle-800 text-turtle-200 text-xs font-semibold tracking-wider uppercase mb-8">
+        <span>Executive Practice</span>
+        <span>•</span>
+        <span>Miriam & Dr. Markus Schmidberger</span>
       </div>
 
       <!-- Main Headline -->
-      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.18] sm:leading-[1.15] text-balance mb-6">
-        Bridge Deep Technical Architecture with <span class="text-turtle-300 italic font-normal">Human-Centered</span> AI Execution.
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15] text-balance mb-6">
+        Bridge Deep Technical Architecture with <span class="italic font-normal text-turtle-300">Human-Centered</span> AI Execution.
       </h1>
 
       <!-- Subheadline -->
-      <p class="max-w-3xl mx-auto text-base sm:text-lg lg:text-xl text-sand-300 leading-relaxed text-balance mb-10">
-        Strategic Data & AI advisory led jointly by <strong class="text-white font-semibold">Miriam Schmidberger</strong> (Industry AI Advisor for Munster Technological University MTU Kerry, Adaptability Leader) and <strong class="text-white font-semibold">Dr. Markus Schmidberger</strong> (PhD Bioinformatics, former Director of Data at Scout24, AWS ProServe Senior Consultant). We help boards, CTOs, and executive teams translate AI technology into scalable cloud architectures, workforce readiness, and measurable enterprise ROI.
+      <p class="max-w-2xl mx-auto text-base sm:text-lg lg:text-xl text-sand-300 leading-relaxed text-balance mb-10 font-normal">
+        Strategic Data & AI advisory led jointly by <strong class="text-white font-semibold">Miriam Schmidberger</strong> (Industry AI Advisor for Munster Technological University MTU Kerry) and <strong class="text-white font-semibold">Dr. Markus Schmidberger</strong> (PhD Bioinformatics, former Director of Data at Scout24, AWS ProServe). We help executive teams and boards translate AI into scalable cloud architectures, workforce readiness, and measurable enterprise ROI.
       </p>
 
       <!-- Primary Action CTAs -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10">
         <a 
           href="mailto:info@turtletrafo.de?subject=Enterprise%20Data%20%26%20AI%20Advisory%20Inquiry" 
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-turtle-400 focus:ring-offset-2 min-h-[52px]"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-wider font-semibold text-turtle-950 bg-sand-200 hover:bg-white active:bg-sand-300 shadow-md transition-all min-h-[50px]"
         >
-          <svg class="w-5 h-5 text-turtle-800" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-4 h-4 text-turtle-900" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
           <span>Email Inquiry: info@turtletrafo.de</span>
         </a>
         <a 
           href={getRelativePath('/about')} 
-          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-800/80 hover:bg-turtle-800 active:bg-turtle-700 transition-all border border-turtle-700 min-h-[52px]"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs uppercase tracking-wider font-semibold text-sand-200 bg-turtle-900 hover:bg-turtle-800 border border-turtle-800 transition-all min-h-[50px]"
         >
-          Our 20-Year Story & Background
+          Our 20-Year Story
         </a>
       </div>
 
-      <!-- Status Notice Banner -->
-      <div class="max-w-2xl mx-auto p-4 rounded-xl bg-turtle-900/90 border border-turtle-700/80 text-sand-300 text-xs sm:text-sm flex items-center justify-center gap-3">
-        <svg class="w-5 h-5 text-accent flex-shrink-0" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <span>
-          <strong>Advisory Status:</strong> Currently accepting a selective number of enterprise advisory & board mandates for 2026.
-        </span>
-      </div>
+      <!-- Clean Status Notice -->
+      <p class="text-xs text-sand-400">
+        Direct confidential advisory inquiries: <a href="mailto:info@turtletrafo.de" class="text-turtle-300 underline underline-offset-4 font-medium">info@turtletrafo.de</a>
+      </p>
 
     </div>
   </section>
 
-  <!-- The Dual Problem & Solution -->
-  <section class="py-20 bg-sand-50 border-b border-sand-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- The Enterprise AI Reality -->
+  <section class="py-24 bg-sand-50 border-b border-sand-200/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-3xl mx-auto text-center mb-16">
-        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Enterprise AI Reality</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-1 mb-4">
-          Why 80% of Enterprise AI Fails: The Dual Disconnect
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">The Core Challenge</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-turtle-950 mt-2 mb-4 tracking-tight">
+          Why Enterprise AI Fails: The Dual Disconnect
         </h2>
         <p class="text-sand-700 text-sm sm:text-base leading-relaxed">
           Enterprise AI transformations rarely fail because the algorithms are flawed. They fail because of a critical split: between complex technical architectures and the human organizational culture tasked with adopting them.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
         
-        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-red-100 text-red-800 flex items-center justify-center font-bold text-base">
-            ✕
-          </div>
-          <h3 class="font-serif text-xl font-bold text-turtle-950">The Technical Pitfall</h3>
-          <p class="text-sand-700 text-sm leading-relaxed">
+        <div class="p-8 sm:p-10 rounded-2xl bg-white border border-sand-200/80 shadow-sm space-y-4">
+          <div class="text-xs uppercase tracking-wider font-semibold text-sand-500">The Technical Pitfall</div>
+          <h3 class="font-serif text-2xl font-normal text-turtle-950">Architectural Complexity & Vendor Lock-In</h3>
+          <p class="text-sand-700 text-xs sm:text-sm leading-relaxed">
             Unfocused proofs-of-concept that never reach production, brittle data pipelines, spiraling cloud and LLM API costs, and severe multi-million-euro vendor lock-in that paralyzes technological flexibility.
           </p>
           <div class="pt-2 text-xs font-semibold text-turtle-800">
-            Solved by Dr. Markus Schmidberger's 20-year cloud & data architecture playbook.
+            Guided by Dr. Markus Schmidberger's 20-year cloud & data architecture playbook.
           </div>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-red-100 text-red-800 flex items-center justify-center font-bold text-base">
-            ✕
-          </div>
-          <h3 class="font-serif text-xl font-bold text-turtle-950">The Cultural & Adoption Pitfall</h3>
-          <p class="text-sand-700 text-sm leading-relaxed">
-            Workforce skepticism, unaddressed fear of job displacement, lack of adaptability under rapid change, and executive leadership teams unable to translate AI theory into daily operational behavior.
+        <div class="p-8 sm:p-10 rounded-2xl bg-white border border-sand-200/80 shadow-sm space-y-4">
+          <div class="text-xs uppercase tracking-wider font-semibold text-sand-500">The Cultural Pitfall</div>
+          <h3 class="font-serif text-2xl font-normal text-turtle-950">Workforce Resistance & Fear of Change</h3>
+          <p class="text-sand-700 text-xs sm:text-sm leading-relaxed">
+            Workforce skepticism, unaddressed fear of job displacement, lack of adaptability under rapid technological change, and executive leadership teams unable to translate AI theory into daily operational behavior.
           </p>
           <div class="pt-2 text-xs font-semibold text-turtle-800">
-            Solved by Miriam Schmidberger's industry AI advisory & adaptability frameworks.
+            Guided by Miriam Schmidberger's MTU Kerry AI advisory & adaptability frameworks.
           </div>
         </div>
 
       </div>
 
-      <!-- Bridge Callout -->
-      <div class="p-8 sm:p-10 rounded-3xl bg-turtle-950 text-sand-100 border border-turtle-800 text-center max-w-4xl mx-auto shadow-xl">
-        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
+      <!-- Integrated Solution Box -->
+      <div class="p-8 sm:p-10 rounded-2xl bg-turtle-950 text-sand-100 border border-turtle-900 text-center max-w-3xl mx-auto shadow-md">
+        <h3 class="font-serif text-2xl font-normal text-white mb-3">
           The Turtle Transformation Advantage: Systems + People
         </h3>
-        <p class="text-sand-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+        <p class="text-sand-300 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
           We combine cutting-edge distributed data architecture and production AI engineering with accredited adaptability science and human change leadership. Your organization gains both the architectural horsepower to build and the cultural resilience to adopt.
         </p>
       </div>
@@ -151,12 +143,12 @@ const dataAiSchema = {
   </section>
 
   <!-- Dual Advisor Profiles -->
-  <section class="py-24 bg-white border-b border-sand-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-24 bg-white border-b border-sand-200/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Advisory Practice</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-2 mb-4">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">The Advisory Practice</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-turtle-950 mt-2 mb-4 tracking-tight">
           Meet Your Strategic AI & Data Advisors
         </h2>
         <p class="text-sand-700 leading-relaxed text-sm sm:text-base">
@@ -164,75 +156,65 @@ const dataAiSchema = {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         
         <!-- Advisor 1: Miriam Schmidberger -->
-        <div class="rounded-3xl bg-sand-50 p-8 sm:p-10 border-2 border-sand-300 flex flex-col justify-between shadow-sm">
+        <div class="rounded-2xl bg-sand-50/70 p-8 sm:p-10 border border-sand-200/80 flex flex-col justify-between shadow-sm">
           <div>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 rounded-2xl bg-turtle-950 text-turtle-300 flex items-center justify-center font-serif text-2xl font-bold shadow-md border border-turtle-800 flex-shrink-0">
-                MS
+            <div class="mb-4">
+              <div class="text-xs uppercase tracking-wider font-semibold text-turtle-700">
+                Industry AI Advisor • Adaptability Leader
               </div>
-              <div>
-                <h3 class="font-serif text-2xl font-bold text-turtle-950">Miriam Schmidberger</h3>
-                <p class="text-xs uppercase tracking-widest text-turtle-700 font-bold mt-0.5">
-                  Industry AI Advisor • Adaptability Leader
-                </p>
-              </div>
+              <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1">Miriam Schmidberger</h3>
             </div>
 
-            <p class="text-sm text-sand-800 leading-relaxed mb-6">
+            <p class="text-xs sm:text-sm text-sand-800 leading-relaxed mb-6">
               As an <strong>Industry AI Advisor for Munster Technological University (MTU) Kerry</strong>, Miriam advises academic, industry, and leadership teams on the human, ethical, and practical dimensions of AI integration. Combining 20+ years of executive coaching with certified adaptability credentials (AQai Level 1), she specializes in eliminating workforce resistance, cultivating psychological safety, and designing high-adaptability cultures ready for continuous technological evolution.
             </p>
 
-            <div class="space-y-2.5 pt-4 border-t border-sand-300/80 text-xs text-sand-700">
+            <div class="space-y-2 pt-4 border-t border-sand-200/60 text-xs text-sand-700">
               <div class="flex items-start gap-2">
                 <span class="text-turtle-700 font-bold">✓</span>
-                <span><strong>Munster Technological University (MTU) Kerry:</strong> Industry AI Advisor</span>
+                <span><strong>MTU Kerry:</strong> Industry AI Advisor</span>
               </div>
               <div class="flex items-start gap-2">
                 <span class="text-turtle-700 font-bold">✓</span>
-                <span><strong>Certified AQai Adaptability Coach:</strong> Measuring and elevating workforce AQ</span>
+                <span><strong>Certified AQai Adaptability Coach:</strong> Measuring & elevating workforce AQ</span>
               </div>
               <div class="flex items-start gap-2">
                 <span class="text-turtle-700 font-bold">✓</span>
-                <span><strong>Greator Festival 2024 Keynote:</strong> Spoke to thousands on personal and organizational transformation</span>
+                <span><strong>Greator Festival 2024 Keynote:</strong> Spoke to thousands on transformation</span>
               </div>
               <div class="flex items-start gap-2">
                 <span class="text-turtle-700 font-bold">✓</span>
-                <span><strong>Human-in-the-Loop AI Integration:</strong> Overcoming employee fear and resistance</span>
+                <span><strong>Human-in-the-Loop AI:</strong> Overcoming employee resistance & anxiety</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-8 pt-6 border-t border-sand-300">
-            <span class="text-xs font-semibold text-turtle-900 uppercase tracking-wider">Focus: AI Culture, Human Adaptability & Adoption</span>
+          <div class="mt-8 pt-4 border-t border-sand-200/60 text-xs font-semibold text-turtle-900 uppercase tracking-wider">
+            Focus: AI Culture, Human Adaptability & Adoption
           </div>
         </div>
 
         <!-- Advisor 2: Dr. Markus Schmidberger -->
-        <div class="rounded-3xl bg-sand-50 p-8 sm:p-10 border-2 border-sand-300 flex flex-col justify-between shadow-sm">
+        <div class="rounded-2xl bg-sand-50/70 p-8 sm:p-10 border border-sand-200/80 flex flex-col justify-between shadow-sm">
           <div>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 rounded-2xl bg-turtle-900 text-turtle-200 flex items-center justify-center font-serif text-2xl font-bold shadow-md border border-turtle-700 flex-shrink-0">
-                MS
+            <div class="mb-4">
+              <div class="text-xs uppercase tracking-wider font-semibold text-turtle-700">
+                Data & AI Strategist • Former Director
               </div>
-              <div>
-                <h3 class="font-serif text-2xl font-bold text-turtle-950">Dr. Markus Schmidberger</h3>
-                <p class="text-xs uppercase tracking-widest text-turtle-700 font-bold mt-0.5">
-                  Data & AI Strategist • Former Director
-                </p>
-              </div>
+              <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1">Dr. Markus Schmidberger</h3>
             </div>
 
-            <p class="text-sm text-sand-800 leading-relaxed mb-6">
+            <p class="text-xs sm:text-sm text-sand-800 leading-relaxed mb-6">
               Holding a <strong>PhD in Bioinformatics and Technical Mathematics</strong>, Markus brings 20 years of hands-on data leadership across high-growth scale-ups, global tech corporations, and cloud hyperscalers. As Director of Data at Scout24 Group, he scaled the data and analytics organization from 15 to 50+ engineers. As a Senior Consultant at Amazon Web Services (AWS) ProServe, he architected large-scale distributed systems and high-throughput data platforms.
             </p>
 
-            <div class="space-y-2.5 pt-4 border-t border-sand-300/80 text-xs text-sand-700">
+            <div class="space-y-2 pt-4 border-t border-sand-200/60 text-xs text-sand-700">
               <div class="flex items-start gap-2">
                 <span class="text-turtle-700 font-bold">✓</span>
-                <span><strong>Scout24 Group:</strong> Director of Data, scaled engineering org 15 → 50+</span>
+                <span><strong>Scout24 Group:</strong> Director of Data, scaled org from 15 to 50+</span>
               </div>
               <div class="flex items-start gap-2">
                 <span class="text-turtle-700 font-bold">✓</span>
@@ -244,13 +226,13 @@ const dataAiSchema = {
               </div>
               <div class="flex items-start gap-2">
                 <span class="text-turtle-700 font-bold">✓</span>
-                <span><strong>Certified Life Trust Coach:</strong> Fusing engineering rigor with executive mentorship</span>
+                <span><strong>Certified Life Trust Coach:</strong> Fusing technical rigor with executive mentorship</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-8 pt-6 border-t border-sand-300">
-            <span class="text-xs font-semibold text-turtle-900 uppercase tracking-wider">Focus: Enterprise Data Platforms, LLM Architecture & Scale</span>
+          <div class="mt-8 pt-4 border-t border-sand-200/60 text-xs font-semibold text-turtle-900 uppercase tracking-wider">
+            Focus: Enterprise Data Platforms, LLM Architecture & Scale
           </div>
         </div>
 
@@ -261,11 +243,11 @@ const dataAiSchema = {
 
   <!-- Core Advisory Offerings -->
   <section class="py-24 bg-sand-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">Advisory Focus Areas</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-2 mb-4">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">Advisory Focus</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-turtle-950 mt-2 mb-4 tracking-tight">
           How We Partner with Enterprise Leaders
         </h2>
         <p class="text-sand-700 leading-relaxed text-sm sm:text-base">
@@ -273,18 +255,16 @@ const dataAiSchema = {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Area 1 -->
-        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-white border border-sand-200/80 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-turtle-100 text-turtle-800 flex items-center justify-center font-bold font-serif text-xl mb-6">
-              01
-            </div>
-            <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+            <div class="font-serif text-2xl text-sand-400 mb-4">01</div>
+            <h3 class="font-serif text-xl font-normal text-turtle-950 mb-3">
               Data & AI Strategy Roadmap
             </h3>
-            <p class="text-sand-700 text-sm leading-relaxed mb-6">
+            <p class="text-sand-700 text-xs leading-relaxed mb-6">
               Establish an actionable, high-ROI technological roadmap. We audit data foundation readiness, identify high-impact AI use cases, evaluate LLM architectures, and prevent multi-million-euro vendor lock-in.
             </p>
             <ul class="space-y-2 text-xs text-sand-600">
@@ -302,21 +282,19 @@ const dataAiSchema = {
               </li>
             </ul>
           </div>
-          <div class="mt-8 pt-6 border-t border-sand-200">
-            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Strategic Audit & Roadmap</span>
+          <div class="mt-8 pt-4 border-t border-sand-200/60 text-xs text-turtle-700 font-semibold uppercase tracking-wider">
+            Format: Strategic Audit & Roadmap
           </div>
         </div>
 
         <!-- Area 2 -->
-        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-white border border-sand-200/80 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-turtle-100 text-turtle-800 flex items-center justify-center font-bold font-serif text-xl mb-6">
-              02
-            </div>
-            <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+            <div class="font-serif text-2xl text-sand-400 mb-4">02</div>
+            <h3 class="font-serif text-xl font-normal text-turtle-950 mb-3">
               Human-AI Adoption & Culture
             </h3>
-            <p class="text-sand-700 text-sm leading-relaxed mb-6">
+            <p class="text-sand-700 text-xs leading-relaxed mb-6">
               Led by Miriam Schmidberger (Industry AI Advisor for MTU Kerry). Redesign workflows for human-in-the-loop intelligence, measure organizational adaptability, and build high-trust cultures where teams embrace AI without fear.
             </p>
             <ul class="space-y-2 text-xs text-sand-600">
@@ -334,21 +312,19 @@ const dataAiSchema = {
               </li>
             </ul>
           </div>
-          <div class="mt-8 pt-6 border-t border-sand-200">
-            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Change Advisory & Workflows</span>
+          <div class="mt-8 pt-4 border-t border-sand-200/60 text-xs text-turtle-700 font-semibold uppercase tracking-wider">
+            Format: Change Advisory & Workflows
           </div>
         </div>
 
         <!-- Area 3 -->
-        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-white border border-sand-200/80 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-turtle-100 text-turtle-800 flex items-center justify-center font-bold font-serif text-xl mb-6">
-              03
-            </div>
-            <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+            <div class="font-serif text-2xl text-sand-400 mb-4">03</div>
+            <h3 class="font-serif text-xl font-normal text-turtle-950 mb-3">
               Interim CTO & Board Advisory
             </h3>
-            <p class="text-sand-700 text-sm leading-relaxed mb-6">
+            <p class="text-sand-700 text-xs leading-relaxed mb-6">
               Led by Dr. Markus Schmidberger. Strategic sounding board for CEOs, founders, and private equity boards. Scaling engineering orgs from 15 to 50+ engineers with zero-panic incident governance.
             </p>
             <ul class="space-y-2 text-xs text-sand-600">
@@ -366,8 +342,8 @@ const dataAiSchema = {
               </li>
             </ul>
           </div>
-          <div class="mt-8 pt-6 border-t border-sand-200">
-            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Board Advisory & Retainers</span>
+          <div class="mt-8 pt-4 border-t border-sand-200/60 text-xs text-turtle-700 font-semibold uppercase tracking-wider">
+            Format: Board Advisory & Retainers
           </div>
         </div>
 
@@ -377,39 +353,37 @@ const dataAiSchema = {
   </section>
 
   <!-- Contact / Booking CTA -->
-  <section class="py-20 bg-turtle-950 text-sand-100">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+  <section class="py-24 sm:py-28 bg-turtle-950 text-sand-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-normal text-white mb-4 tracking-tight">
         Initiate a Confidential Strategic Conversation
       </h2>
-      <p class="text-sand-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+      <p class="text-sand-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
         Whether you are planning an enterprise AI transition, addressing workforce adoption friction, or seeking board-level technical advisory, we welcome direct confidential inquiries.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a 
           href="mailto:info@turtletrafo.de?subject=Strategic%20Data%20%26%20AI%20Advisory%20Inquiry" 
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-lg transition-all min-h-[52px]"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-wider font-semibold text-turtle-950 bg-sand-200 hover:bg-white active:bg-sand-300 shadow-md transition-all min-h-[50px]"
         >
-          <svg class="w-5 h-5 text-turtle-800" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-4 h-4 text-turtle-900" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
           <span>Email Inquiry to info@turtletrafo.de</span>
         </a>
         <a 
           href={getRelativePath('/')} 
-          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-900 hover:bg-turtle-800 border border-turtle-700 transition-all min-h-[52px]"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs uppercase tracking-wider font-semibold text-sand-200 bg-turtle-900 hover:bg-turtle-800 border border-turtle-800 transition-all min-h-[50px]"
         >
           View 12-Month Coaching Program
         </a>
       </div>
 
-      <p class="text-xs text-turtle-400 mt-6">
-        Direct executive email: <a href="mailto:info@turtletrafo.de" class="underline hover:text-white">info@turtletrafo.de</a> • Response within 24 business hours
+      <p class="text-xs text-turtle-400 mt-8">
+        Direct executive email: <a href="mailto:info@turtletrafo.de" class="underline underline-offset-4 hover:text-white">info@turtletrafo.de</a> • Response within 24 business hours
       </p>
     </div>
   </section>
 
 </Layout>
-
-
