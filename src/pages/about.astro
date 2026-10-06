@@ -1,0 +1,318 @@
+---
+// src/pages/about.astro
+import Layout from '../layouts/Layout.astro';
+
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Our 20-Year Journey | Miriam & Dr. Markus Schmidberger',
+  description: 'The story behind Turtle Transformation: How Miriam and Dr. Markus Schmidberger united deep somatic transformation with high-stakes executive data leadership.',
+  mainEntity: [
+    {
+      '@type': 'Person',
+      name: 'Miriam Schmidberger',
+      jobTitle: 'Co-Founder & Executive Performance Coach',
+      description: 'Certified AQai Adaptability Coach, Unbeatable Mind & Heroic Certified Coach, Yoga Alliance Master Teacher, and Greator Festival 2024 Keynote Speaker.',
+    },
+    {
+      '@type': 'Person',
+      name: 'Dr. Markus Schmidberger',
+      jobTitle: 'Co-Founder & Enterprise Data/AI Strategist',
+      description: 'PhD in Bioinformatics/Mathematics, former Director of Data at Scout24 Group, AWS ProServe Senior Consultant, and certified Life Trust Coach.',
+    },
+  ],
+};
+---
+
+<Layout
+  title="Our 20-Year Journey | Miriam & Dr. Markus Schmidberger | Turtle Transformation"
+  description="Discover the 20-year story of Turtle Transformation: uniting executive data leadership and agile scaling with somatic emotional regulation and deep personal growth."
+  jsonLd={aboutPageSchema}
+>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-sand-100/80 via-sand-50 to-sand-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Pre-header Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-turtle-100 text-turtle-900 text-xs sm:text-sm font-medium mb-8 border border-turtle-300 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-turtle-600"></span>
+        <span>The Founders • 2006 to 2026</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-turtle-950 leading-[1.18] sm:leading-[1.15] text-balance mb-6">
+        Two Decades of Leadership, <span class="text-turtle-700 italic font-normal">Transformation, & Truth.</span>
+      </h1>
+
+      <p class="text-base sm:text-lg lg:text-xl text-sand-700 leading-relaxed text-balance mb-10">
+        How a high-stakes corporate data executive and a deep somatic performance coach forged an unshakeable philosophy: that lasting outward leadership impact is only possible when you master inner stillness.
+      </p>
+
+      <div class="inline-flex items-center gap-4 text-xs sm:text-sm text-sand-600 border-t border-b border-sand-300 py-3 px-6">
+        <span>Founded in Kerry, Ireland</span>
+        <span>•</span>
+        <span>Empowering 1,000,000 Leaders</span>
+        <span>•</span>
+        <span>The Authentic Leader Academy</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The Philosophy of the Turtle -->
+  <section class="py-20 bg-white border-y border-sand-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">Our Totem & Core Principles</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-2 mb-4">
+          Why the Turtle?
+        </h2>
+        <p class="text-sand-700 leading-relaxed text-sm sm:text-base">
+          In an executive world addicted to frantic reactivity, the turtle represents timeless wisdom, steady resilience, and unshakeable inner calm.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-8 rounded-2xl bg-sand-50 border border-sand-300">
+          <div class="w-10 h-10 rounded-xl bg-turtle-800 text-turtle-200 flex items-center justify-center font-bold mb-6">
+            01
+          </div>
+          <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+            Slow is Smooth, Smooth is Fast
+          </h3>
+          <p class="text-sand-700 text-sm leading-relaxed">
+            Rushing creates tunnel vision, relational collateral damage, and costly operational blunders. When leaders pause to digest emotions and establish inner clarity, their speed of high-stakes execution accelerates dramatically.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-sand-50 border border-sand-300">
+          <div class="w-10 h-10 rounded-xl bg-turtle-800 text-turtle-200 flex items-center justify-center font-bold mb-6">
+            02
+          </div>
+          <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+            Carrying Your Shelter Within
+          </h3>
+          <p class="text-sand-700 text-sm leading-relaxed">
+            The turtle carries its home everywhere. True leaders do not depend on external validation, titles, or corporate market stability for emotional safety. They cultivate unshakeable self-worth from the inside out.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-sand-50 border border-sand-300">
+          <div class="w-10 h-10 rounded-xl bg-turtle-800 text-turtle-200 flex items-center justify-center font-bold mb-6">
+            03
+          </div>
+          <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+            Land and Ocean Fluency
+          </h3>
+          <p class="text-sand-700 text-sm leading-relaxed">
+            Thriving both on grounded earth (structure, KPIs, technical architecture) and in deep waters (emotional complexity, psychological safety, intuition). We bridge both worlds without compromise.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The 20-Year Evolution Timeline (2006–2026) -->
+  <section class="py-24 bg-sand-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Journey</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-2 mb-4">
+          20 Years in the Making
+        </h2>
+        <p class="text-sand-700 text-sm sm:text-base">
+          Our coaching and advisory methodologies weren’t developed in a seminar room. They were forged in the crucible of real corporate high-stakes leadership, academic boundaries, and continuous personal growth.
+        </p>
+      </div>
+
+      <div class="space-y-12 relative before:absolute before:inset-0 before:left-8 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-sand-300">
+        
+        <!-- Timeline Item 1 -->
+        <div class="relative flex flex-col md:flex-row items-start group">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-turtle-800 text-turtle-200 border-4 border-sand-50 font-bold text-xs absolute left-4 md:left-1/2 -translate-x-1/2 shadow-sm z-10">
+            1
+          </div>
+          <div class="ml-16 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+            <span class="text-xs font-bold uppercase tracking-wider text-turtle-700">2006 – 2011</span>
+            <h3 class="font-serif text-xl font-bold text-turtle-950 mt-1 mb-2">Boundaries & Academic Pressure</h3>
+            <p class="text-sm text-sand-700 leading-relaxed">
+              Completing his Technical Mathematics diploma and PhD in Bioinformatics, Markus faced intense academic pressures to donate 20 unpaid hours weekly. With Miriam's coaching on structured reflection questions, he learned to assert legal boundaries while satisfying professors—discovering the power of contractual agency.
+            </p>
+          </div>
+          <div class="hidden md:block md:w-1/2"></div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="relative flex flex-col md:flex-row items-start group">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-turtle-800 text-turtle-200 border-4 border-sand-50 font-bold text-xs absolute left-4 md:left-1/2 -translate-x-1/2 shadow-sm z-10">
+            2
+          </div>
+          <div class="hidden md:block md:w-1/2"></div>
+          <div class="ml-16 md:ml-0 md:w-1/2 md:pl-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-turtle-700">2011 – 2014</span>
+            <h3 class="font-serif text-xl font-bold text-turtle-950 mt-1 mb-2">Fatherhood, Marriage & The Big Data Shift</h3>
+            <p class="text-sm text-sand-700 leading-relaxed">
+              Balancing fatherhood, modern marriage dynamics, and the transition into cloud and big data engineering. Through deep intentional relationship work and counseling, Miriam and Markus developed the communication tools that now anchor their coaching framework.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="relative flex flex-col md:flex-row items-start group">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-turtle-800 text-turtle-200 border-4 border-sand-50 font-bold text-xs absolute left-4 md:left-1/2 -translate-x-1/2 shadow-sm z-10">
+            3
+          </div>
+          <div class="ml-16 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+            <span class="text-xs font-bold uppercase tracking-wider text-turtle-700">2014 – 2020</span>
+            <h3 class="font-serif text-xl font-bold text-turtle-950 mt-1 mb-2">AWS ProServe & Scaling Scout24 to 50+ Engineers</h3>
+            <p class="text-sm text-sand-700 leading-relaxed">
+              Markus served as Senior Consultant at AWS and subsequently Director of Data at Scout24 Group. Scaling the data organization from 15 to 50+ engineers across multiple hubs, Miriam coached him to handle major live production data incidents with zero panic. Together they proved that psychological safety dramatically reduces employee turnover and sick days while multiplying output.
+            </p>
+          </div>
+          <div class="hidden md:block md:w-1/2"></div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="relative flex flex-col md:flex-row items-start group">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-turtle-800 text-turtle-200 border-4 border-sand-50 font-bold text-xs absolute left-4 md:left-1/2 -translate-x-1/2 shadow-sm z-10">
+            4
+          </div>
+          <div class="hidden md:block md:w-1/2"></div>
+          <div class="ml-16 md:ml-0 md:w-1/2 md:pl-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-turtle-700">2021 – 2026</span>
+            <h3 class="font-serif text-xl font-bold text-turtle-950 mt-1 mb-2">The Authentic Leader Academy & Global Reach</h3>
+            <p class="text-sm text-sand-700 leading-relaxed">
+              Relocating their family to the rugged Atlantic coast of Kerry, Ireland, they formalized **Turtle Transformation Limited**. Miriam spoke at the Greator Festival 2024 to thousands of leaders alongside Tony Robbins. Today, they deliver 12-month executive coaching and enterprise Data/AI strategic advisory worldwide.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Detailed Founder Bios -->
+  <section class="py-24 bg-white border-t border-sand-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- Miriam Bio -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5">
+          <div class="rounded-3xl bg-turtle-950 text-sand-100 p-8 text-center border-2 border-turtle-800 shadow-xl">
+            <div class="w-24 h-24 rounded-2xl bg-turtle-900 border border-turtle-700 flex items-center justify-center font-serif text-3xl font-bold text-turtle-300 mx-auto mb-4">
+              MS
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white">Miriam Schmidberger</h3>
+            <p class="text-xs uppercase tracking-widest text-turtle-400 font-semibold mt-1 mb-6">
+              Change Angel & Executive Performance Coach
+            </p>
+            <div class="text-xs text-sand-300 space-y-2 text-left border-t border-turtle-800 pt-4">
+              <p>• Keynote Speaker, Greator Festival 2024</p>
+              <p>• Certified Adaptability Coach (AQai Level 1)</p>
+              <p>• Certified Unbeatable Mind & Heroic Coach</p>
+              <p>• Master Yoga Alliance Teacher</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-7 space-y-5">
+          <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Heart of Transformation</span>
+          <h2 class="font-serif text-3xl font-bold text-turtle-950">About Miriam Schmidberger</h2>
+          <p class="text-sand-800 text-sm sm:text-base leading-relaxed">
+            Miriam specializes in what most leadership programs ignore: the nervous system, emotional digestion, and the shadow patterns that cause leaders to over-function, burn out, or shutdown under crisis.
+          </p>
+          <p class="text-sand-800 text-sm sm:text-base leading-relaxed">
+            Drawing on over 20 years of continuous study in Internal Family Systems (IFS), Non-Violent Communication, somatic breathwork, and adaptability science, Miriam provides an uncompromising yet deeply compassionate sounding board. She guides senior leaders to step out of inherited childhood compliance and into authentic, calm power.
+          </p>
+          <div class="pt-2">
+            <a 
+              href="/" 
+              class="inline-flex items-center gap-2 text-sm font-semibold text-turtle-800 hover:text-turtle-900 underline underline-offset-4"
+            >
+              <span>Explore Miriam's 12-Month Executive Coaching Program</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Markus Bio -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center pt-12 border-t border-sand-200">
+        <div class="md:col-span-7 space-y-5 order-2 md:order-1">
+          <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">Enterprise Strategy & Execution</span>
+          <h2 class="font-serif text-3xl font-bold text-turtle-950">About Dr. Markus Schmidberger</h2>
+          <p class="text-sand-800 text-sm sm:text-base leading-relaxed">
+            Markus holds a PhD in Bioinformatics and Technical Mathematics. His career spans building early cloud platforms, leading big data consulting initiatives at Amazon Web Services (AWS) ProServe, and serving as Director of Data at Scout24 Group, where he scaled the engineering organization from 15 to over 50 people.
+          </p>
+          <p class="text-sand-800 text-sm sm:text-base leading-relaxed">
+            He combines deep technical rigor in distributed systems, modern cloud architecture, and enterprise AI with certified coaching credentials (Life Trust Coaching). Markus acts as a trusted peer sounding board for CTOs, CEOs, and investment boards seeking to turn AI theory into sustainable competitive advantage.
+          </p>
+          <div class="pt-2">
+            <a 
+              href="/data-ai-consulting" 
+              class="inline-flex items-center gap-2 text-sm font-semibold text-turtle-800 hover:text-turtle-900 underline underline-offset-4"
+            >
+              <span>Explore Markus's Enterprise Data & AI Consulting</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 order-1 md:order-2">
+          <div class="rounded-3xl bg-sand-100 text-turtle-950 p-8 text-center border-2 border-sand-300 shadow-md">
+            <div class="w-24 h-24 rounded-2xl bg-turtle-900 border border-turtle-700 flex items-center justify-center font-serif text-3xl font-bold text-turtle-200 mx-auto mb-4">
+              MS
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-turtle-950">Dr. Markus Schmidberger</h3>
+            <p class="text-xs uppercase tracking-widest text-turtle-700 font-semibold mt-1 mb-6">
+              Data & AI Strategist • Former Scout24 Director
+            </p>
+            <div class="text-xs text-sand-700 space-y-2 text-left border-t border-sand-200 pt-4">
+              <p>• PhD in Bioinformatics & Mathematics</p>
+              <p>• Ex-Director of Data at Scout24 Group (scaled to 50+)</p>
+              <p>• Ex-Senior Big Data Consultant at AWS ProServe</p>
+              <p>• Certified Life Trust Coach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final Contact CTA -->
+  <section class="py-20 bg-turtle-950 text-sand-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+        Connect with Miriam & Markus
+      </h2>
+      <p class="text-sand-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+        Whether you are seeking 1-on-1 executive coaching, team leadership culture transformation, or strategic enterprise AI advisory, reach out directly to start a conversation.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="mailto:info@turtletrafo.de?subject=General%20Inquiry%20-%20Turtle%20Transformation" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-lg transition-all min-h-[52px]"
+        >
+          <svg class="w-5 h-5 text-turtle-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>Email Us: info@turtletrafo.de</span>
+        </a>
+      </div>
+
+      <p class="text-xs text-turtle-400 mt-6">
+        Turtle Transformation Limited • Glenbeigh, Co. Kerry, Ireland • Phone: +353 87 227 5723
+      </p>
+    </div>
+  </section>
+
+</Layout>
+

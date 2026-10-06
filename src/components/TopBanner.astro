@@ -1,0 +1,32 @@
+---
+// src/components/TopBanner.astro
+---
+
+<div class="bg-turtle-950 text-sand-100 border-b border-turtle-800/80 px-4 py-2.5 sm:px-6">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm gap-2">
+    <div class="flex items-center gap-2">
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full font-medium text-[11px] tracking-wider uppercase bg-turtle-800 text-turtle-200 border border-turtle-700">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        Enterprise Advisory
+      </span>
+      <span class="text-sand-200 font-normal">
+        Looking for strategic Data & AI leadership?
+      </span>
+    </div>
+    
+    <div class="flex items-center gap-4">
+      <span class="text-sand-300 hidden md:inline">
+        Executive guidance by Dr. Markus Schmidberger (ex-Scout24 Director, AWS)
+      </span>
+      <a 
+        href="/data-ai-consulting" 
+        class="inline-flex items-center gap-1 text-turtle-300 hover:text-white font-medium underline underline-offset-4 decoration-turtle-500/60 transition-colors"
+      >
+        <span>Explore Data & AI Consulting</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+          <path d="M6 3L11 8L6 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

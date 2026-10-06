@@ -1,0 +1,294 @@
+---
+// src/pages/data-ai-consulting.astro
+import Layout from '../layouts/Layout.astro';
+
+const dataAiSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Enterprise Data & AI Strategy Advisory',
+  provider: {
+    '@type': 'Person',
+    name: 'Dr. Markus Schmidberger',
+    jobTitle: 'Enterprise Data & AI Strategist / Co-Founder',
+    alumniOf: 'Technical University of Munich',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Turtle Transformation Limited',
+    },
+  },
+  description: 'Executive Data & AI consulting and strategic advisory for scale-ups and enterprises led by Dr. Markus Schmidberger, former Director of Data at Scout24 and AWS Senior Consultant.',
+  serviceType: 'Data & AI Consulting',
+  areaServed: 'Worldwide',
+};
+---
+
+<Layout
+  title="Enterprise Data & AI Consulting | Dr. Markus Schmidberger | Turtle Transformation"
+  description="Strategic Data & AI leadership advisory by Dr. Markus Schmidberger (ex-Scout24 Director, AWS). Scaling data organizations, AI architecture, and engineering culture."
+  jsonLd={dataAiSchema}
+>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-turtle-950 via-turtle-900 to-turtle-950 text-sand-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Pre-header Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-turtle-800/80 border border-turtle-700 text-turtle-200 text-xs sm:text-sm font-medium mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Executive Technology & AI Advisory</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.18] sm:leading-[1.15] text-balance mb-6">
+        Bridge Deep Data Strategy with <span class="text-turtle-300 italic font-normal">High-Performance</span> Execution.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="max-w-3xl mx-auto text-base sm:text-lg lg:text-xl text-sand-300 leading-relaxed text-balance mb-10">
+        Strategic Data & AI guidance led by <strong class="text-white font-semibold">Dr. Markus Schmidberger</strong> (PhD Bioinformatics, former Director of Data at Scout24, AWS ProServe Senior Consultant). We help boards, CTOs, and enterprise leaders translate AI hype into resilient architectures and high-velocity engineering organizations.
+      </p>
+
+      <!-- Primary Action CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
+        <a 
+          href="mailto:info@turtletrafo.de?subject=Enterprise%20Data%20%26%20AI%20Consulting%20Inquiry" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-turtle-400 focus:ring-offset-2 min-h-[52px]"
+        >
+          <svg class="w-5 h-5 text-turtle-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>Email Inquiry: info@turtletrafo.de</span>
+        </a>
+        <a 
+          href="/about" 
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-800/80 hover:bg-turtle-800 active:bg-turtle-700 transition-all border border-turtle-700 min-h-[52px]"
+        >
+          Learn About Markus’s Journey
+        </a>
+      </div>
+
+      <!-- Status Notice Banner -->
+      <div class="max-w-2xl mx-auto p-4 rounded-xl bg-turtle-900/90 border border-turtle-700/80 text-sand-300 text-xs sm:text-sm flex items-center justify-center gap-3">
+        <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>
+          <strong>Notice:</strong> Full service catalog and case studies are launching soon. Currently accepting a limited number of strategic advisory inquiries for 2026.
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Profile & Credential Overview -->
+  <section class="py-20 bg-white border-b border-sand-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        
+        <div class="md:col-span-4">
+          <div class="rounded-3xl bg-sand-100 p-8 border-2 border-sand-300 text-center">
+            <div class="w-28 h-28 rounded-2xl bg-turtle-900 text-turtle-200 flex items-center justify-center font-serif text-4xl font-bold mx-auto mb-6 shadow-md border border-turtle-700">
+              MS
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-turtle-950">Dr. Markus Schmidberger</h3>
+            <p class="text-xs uppercase tracking-widest text-turtle-700 font-bold mt-1 mb-4">
+              Data & AI Strategist • Former Director
+            </p>
+            <p class="text-xs text-sand-600 leading-relaxed mb-6">
+              PhD in Bioinformatics / Mathematics with 20 years of real-world leadership across high-growth startups, AWS, and publicly traded tech companies.
+            </p>
+            <div class="pt-4 border-t border-sand-200 text-xs text-sand-500 space-y-1">
+              <p>Scout24 Group (scaled data org 15 → 50+)</p>
+              <p>Amazon Web Services (Senior Consultant)</p>
+              <p>Glomex / ProSiebenSat.1 Digital</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-8 space-y-6">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Problem with AI Hype</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-1">
+              Moving Beyond the AI Theater to Sustainable ROI
+            </h2>
+          </div>
+
+          <p class="text-sand-800 leading-relaxed text-sm sm:text-base">
+            Every executive team is under immense pressure to deploy Generative AI, modernize legacy platforms, and scale data initiatives. Yet 80% of enterprise AI projects stall in expensive proof-of-concept limbo or fail because the underlying data architectures and organizational cultures were never built to support them.
+          </p>
+
+          <p class="text-sand-800 leading-relaxed text-sm sm:text-base">
+            Dr. Markus Schmidberger bridges the critical gap between board-level strategy and deep engineering reality. Having scaled cloud and data infrastructure at Amazon Web Services and led 50+ engineers at Scout24, he helps leadership teams cut through vendor marketing, architect scalable platforms, and establish cultures where engineers thrive.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-sand-200">
+            <div class="p-4 rounded-xl bg-sand-50 border border-sand-200">
+              <span class="font-bold text-turtle-900 block text-sm">Data Architecture & Cloud</span>
+              <span class="text-xs text-sand-600">Resilient, cost-effective architectures built on AWS, Snowflake, and modern cloud stacks.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-sand-50 border border-sand-200">
+              <span class="font-bold text-turtle-900 block text-sm">Engineering Culture & Velocity</span>
+              <span class="text-xs text-sand-600">Psychological safety, non-punitive incident post-mortems, and zero-panic deployments.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Core Advisory Offerings -->
+  <section class="py-24 bg-sand-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">Advisory Focus Areas</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-2 mb-4">
+          How We Partner with Enterprise Leaders
+        </h2>
+        <p class="text-sand-700 leading-relaxed text-sm sm:text-base">
+          Tailored advisory programs for founders, C-level executives, and investment boards navigating complex technological transformations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Area 1 -->
+        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-turtle-100 text-turtle-800 flex items-center justify-center font-bold font-serif text-xl mb-6">
+              01
+            </div>
+            <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+              Data & AI Strategy Roadmap
+            </h3>
+            <p class="text-sand-700 text-sm leading-relaxed mb-6">
+              Establish an actionable, high-ROI technological roadmap. We identify high-impact AI use cases, audit existing data foundations, and prevent multi-million-euro vendor lock-in.
+            </p>
+            <ul class="space-y-2 text-xs text-sand-600">
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Generative AI feasibility & cost modeling</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Data governance & privacy-first design</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Vendor and LLM framework evaluation</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-sand-200">
+            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Strategic Audit & Roadmap</span>
+          </div>
+        </div>
+
+        <!-- Area 2 -->
+        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-turtle-100 text-turtle-800 flex items-center justify-center font-bold font-serif text-xl mb-6">
+              02
+            </div>
+            <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+              Scaling High-Performance Tech Teams
+            </h3>
+            <p class="text-sand-700 text-sm leading-relaxed mb-6">
+              Scale engineering and data science organizations without communication bottlenecks or culture dilution. Based on the proven playbook that scaled Scout24 from 15 to 50+ engineers.
+            </p>
+            <ul class="space-y-2 text-xs text-sand-600">
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Agile Scrum enhanced with psychological safety</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Elimination of structural overtime & burnout</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Cross-functional alignment with Product & Sales</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-sand-200">
+            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Leadership Mentorship & Retainer</span>
+          </div>
+        </div>
+
+        <!-- Area 3 -->
+        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-turtle-100 text-turtle-800 flex items-center justify-center font-bold font-serif text-xl mb-6">
+              03
+            </div>
+            <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
+              Interim CTO & Board Advisory
+            </h3>
+            <p class="text-sand-700 text-sm leading-relaxed mb-6">
+              Senior executive sounding board for CEOs, founders, and private equity boards. Clear technical translation that eliminates jargon and empowers decisive executive governance.
+            </p>
+            <ul class="space-y-2 text-xs text-sand-600">
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Technical due diligence for M&A / investments</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Incident crisis resolution & post-mortem leadership</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-turtle-600 font-bold">✓</span>
+                <span>Executive hiring & technical interview audits</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-sand-200">
+            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Board Advisory & Key Retainers</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact / Booking CTA -->
+  <section class="py-20 bg-turtle-950 text-sand-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+        Initiate a Confidential Strategic Conversation
+      </h2>
+      <p class="text-sand-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+        Whether you are planning an enterprise AI transition, scaling a technical team, or seeking board-level advisory, we welcome direct confidential inquiries.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="mailto:info@turtletrafo.de?subject=Strategic%20Data%20%26%20AI%20Advisory%20Inquiry" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-lg transition-all min-h-[52px]"
+        >
+          <svg class="w-5 h-5 text-turtle-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>Email Inquiry to info@turtletrafo.de</span>
+        </a>
+        <a 
+          href="/" 
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-900 hover:bg-turtle-800 border border-turtle-700 transition-all min-h-[52px]"
+        >
+          View 12-Month Coaching Program
+        </a>
+      </div>
+
+      <p class="text-xs text-turtle-400 mt-6">
+        Direct executive email: <a href="mailto:info@turtletrafo.de" class="underline hover:text-white">info@turtletrafo.de</a> • Response within 24 business hours
+      </p>
+    </div>
+  </section>
+
+</Layout>
+
