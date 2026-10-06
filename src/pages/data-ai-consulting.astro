@@ -6,26 +6,38 @@ import { getRelativePath } from '../utils/paths';
 const dataAiSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Enterprise Data & AI Strategy Advisory',
-  provider: {
-    '@type': 'Person',
-    name: 'Dr. Markus Schmidberger',
-    jobTitle: 'Enterprise Data & AI Strategist / Co-Founder',
-    alumniOf: 'Technical University of Munich',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Turtle Transformation Limited',
+  name: 'Enterprise Data & AI Advisory',
+  provider: [
+    {
+      '@type': 'Person',
+      name: 'Miriam Schmidberger',
+      jobTitle: 'Industry AI Advisor / Co-Founder',
+      affiliation: 'Munster Technological University (MTU) Kerry',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Turtle Transformation Limited',
+      },
     },
-  },
-  description: 'Executive Data & AI consulting and strategic advisory for scale-ups and enterprises led by Dr. Markus Schmidberger, former Director of Data at Scout24 and AWS Senior Consultant.',
-  serviceType: 'Data & AI Consulting',
+    {
+      '@type': 'Person',
+      name: 'Dr. Markus Schmidberger',
+      jobTitle: 'Enterprise Data & AI Strategist / Co-Founder',
+      alumniOf: 'Technical University of Munich',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Turtle Transformation Limited',
+      },
+    },
+  ],
+  description: 'Executive Data & AI advisory for enterprises and scale-ups led jointly by Miriam Schmidberger (Industry AI Advisor for MTU Kerry) and Dr. Markus Schmidberger (former Director of Data at Scout24, AWS Senior Consultant). Bridging deep technical architecture with human adaptability and organizational AI adoption.',
+  serviceType: 'Data & AI Advisory & Consulting',
   areaServed: 'Worldwide',
 };
 ---
 
 <Layout
-  title="Enterprise Data & AI Consulting | Dr. Markus Schmidberger | Turtle Transformation"
-  description="Strategic Data & AI leadership advisory by Dr. Markus Schmidberger (ex-Scout24 Director, AWS). Scaling data organizations, AI architecture, and engineering culture."
+  title="Enterprise Data & AI Advisory | Miriam & Dr. Markus Schmidberger | Turtle Transformation"
+  description="Strategic Data & AI leadership advisory by Miriam Schmidberger (Industry AI Advisor for MTU Kerry) and Dr. Markus Schmidberger (ex-Scout24 Director, AWS). Bridging technical systems with human AI adoption."
   jsonLd={dataAiSchema}
 >
 
@@ -36,23 +48,23 @@ const dataAiSchema = {
       <!-- Pre-header Pill -->
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-turtle-800/80 border border-turtle-700 text-turtle-200 text-xs sm:text-sm font-medium mb-8 shadow-sm">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Executive Technology & AI Advisory</span>
+        <span>Executive Technology & AI Advisory • Dual Leadership</span>
       </div>
 
       <!-- Main Headline -->
       <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.18] sm:leading-[1.15] text-balance mb-6">
-        Bridge Deep Data Strategy with <span class="text-turtle-300 italic font-normal">High-Performance</span> Execution.
+        Bridge Deep Technical Architecture with <span class="text-turtle-300 italic font-normal">Human-Centered</span> AI Execution.
       </h1>
 
       <!-- Subheadline -->
       <p class="max-w-3xl mx-auto text-base sm:text-lg lg:text-xl text-sand-300 leading-relaxed text-balance mb-10">
-        Strategic Data & AI guidance led by <strong class="text-white font-semibold">Dr. Markus Schmidberger</strong> (PhD Bioinformatics, former Director of Data at Scout24, AWS ProServe Senior Consultant). We help boards, CTOs, and enterprise leaders translate AI hype into resilient architectures and high-velocity engineering organizations.
+        Strategic Data & AI advisory led jointly by <strong class="text-white font-semibold">Miriam Schmidberger</strong> (Industry AI Advisor for Munster Technological University MTU Kerry, Adaptability Leader) and <strong class="text-white font-semibold">Dr. Markus Schmidberger</strong> (PhD Bioinformatics, former Director of Data at Scout24, AWS ProServe Senior Consultant). We help boards, CTOs, and executive teams translate AI technology into scalable cloud architectures, workforce readiness, and measurable enterprise ROI.
       </p>
 
       <!-- Primary Action CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
         <a 
-          href="mailto:info@turtletrafo.de?subject=Enterprise%20Data%20%26%20AI%20Consulting%20Inquiry" 
+          href="mailto:info@turtletrafo.de?subject=Enterprise%20Data%20%26%20AI%20Advisory%20Inquiry" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-turtle-950 bg-sand-200 hover:bg-sand-100 active:bg-sand-300 shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-turtle-400 focus:ring-offset-2 min-h-[52px]"
         >
           <svg class="w-5 h-5 text-turtle-800" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +76,7 @@ const dataAiSchema = {
           href={getRelativePath('/about')} 
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-sand-200 bg-turtle-800/80 hover:bg-turtle-800 active:bg-turtle-700 transition-all border border-turtle-700 min-h-[52px]"
         >
-          Learn About Markus’s Journey
+          Our 20-Year Story & Background
         </a>
       </div>
 
@@ -74,64 +86,171 @@ const dataAiSchema = {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <span>
-          <strong>Notice:</strong> Full service catalog and case studies are launching soon. Currently accepting a limited number of strategic advisory inquiries for 2026.
+          <strong>Advisory Status:</strong> Currently accepting a selective number of enterprise advisory & board mandates for 2026.
         </span>
       </div>
 
     </div>
   </section>
 
-  <!-- Profile & Credential Overview -->
-  <section class="py-20 bg-white border-b border-sand-200">
+  <!-- The Dual Problem & Solution -->
+  <section class="py-20 bg-sand-50 border-b border-sand-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Enterprise AI Reality</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-1 mb-4">
+          Why 80% of Enterprise AI Fails: The Dual Disconnect
+        </h2>
+        <p class="text-sand-700 text-sm sm:text-base leading-relaxed">
+          Enterprise AI transformations rarely fail because the algorithms are flawed. They fail because of a critical split: between complex technical architectures and the human organizational culture tasked with adopting them.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         
-        <div class="md:col-span-4">
-          <div class="rounded-3xl bg-sand-100 p-8 border-2 border-sand-300 text-center">
-            <div class="w-28 h-28 rounded-2xl bg-turtle-900 text-turtle-200 flex items-center justify-center font-serif text-4xl font-bold mx-auto mb-6 shadow-md border border-turtle-700">
-              MS
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-turtle-950">Dr. Markus Schmidberger</h3>
-            <p class="text-xs uppercase tracking-widest text-turtle-700 font-bold mt-1 mb-4">
-              Data & AI Strategist • Former Director
-            </p>
-            <p class="text-xs text-sand-600 leading-relaxed mb-6">
-              PhD in Bioinformatics / Mathematics with 20 years of real-world leadership across high-growth startups, AWS, and publicly traded tech companies.
-            </p>
-            <div class="pt-4 border-t border-sand-200 text-xs text-sand-500 space-y-1">
-              <p>Scout24 Group (scaled data org 15 → 50+)</p>
-              <p>Amazon Web Services (Senior Consultant)</p>
-              <p>Glomex / ProSiebenSat.1 Digital</p>
-            </div>
+        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-red-100 text-red-800 flex items-center justify-center font-bold text-base">
+            ✕
+          </div>
+          <h3 class="font-serif text-xl font-bold text-turtle-950">The Technical Pitfall</h3>
+          <p class="text-sand-700 text-sm leading-relaxed">
+            Unfocused proofs-of-concept that never reach production, brittle data pipelines, spiraling cloud and LLM API costs, and severe multi-million-euro vendor lock-in that paralyzes technological flexibility.
+          </p>
+          <div class="pt-2 text-xs font-semibold text-turtle-800">
+            Solved by Dr. Markus Schmidberger's 20-year cloud & data architecture playbook.
           </div>
         </div>
 
-        <div class="md:col-span-8 space-y-6">
+        <div class="p-8 rounded-2xl bg-white border border-sand-300 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-red-100 text-red-800 flex items-center justify-center font-bold text-base">
+            ✕
+          </div>
+          <h3 class="font-serif text-xl font-bold text-turtle-950">The Cultural & Adoption Pitfall</h3>
+          <p class="text-sand-700 text-sm leading-relaxed">
+            Workforce skepticism, unaddressed fear of job displacement, lack of adaptability under rapid change, and executive leadership teams unable to translate AI theory into daily operational behavior.
+          </p>
+          <div class="pt-2 text-xs font-semibold text-turtle-800">
+            Solved by Miriam Schmidberger's industry AI advisory & adaptability frameworks.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bridge Callout -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-turtle-950 text-sand-100 border border-turtle-800 text-center max-w-4xl mx-auto shadow-xl">
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
+          The Turtle Transformation Advantage: Systems + People
+        </h3>
+        <p class="text-sand-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          We combine cutting-edge distributed data architecture and production AI engineering with accredited adaptability science and human change leadership. Your organization gains both the architectural horsepower to build and the cultural resilience to adopt.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Dual Advisor Profiles -->
+  <section class="py-24 bg-white border-b border-sand-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Advisory Practice</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-2 mb-4">
+          Meet Your Strategic AI & Data Advisors
+        </h2>
+        <p class="text-sand-700 leading-relaxed text-sm sm:text-base">
+          A balanced executive partnership uniting university-level AI advisory and enterprise data engineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        
+        <!-- Advisor 1: Miriam Schmidberger -->
+        <div class="rounded-3xl bg-sand-50 p-8 sm:p-10 border-2 border-sand-300 flex flex-col justify-between shadow-sm">
           <div>
-            <span class="text-xs uppercase font-bold tracking-widest text-turtle-600">The Problem with AI Hype</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-turtle-950 mt-1">
-              Moving Beyond the AI Theater to Sustainable ROI
-            </h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-turtle-950 text-turtle-300 flex items-center justify-center font-serif text-2xl font-bold shadow-md border border-turtle-800 flex-shrink-0">
+                MS
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-turtle-950">Miriam Schmidberger</h3>
+                <p class="text-xs uppercase tracking-widest text-turtle-700 font-bold mt-0.5">
+                  Industry AI Advisor • Adaptability Leader
+                </p>
+              </div>
+            </div>
+
+            <p class="text-sm text-sand-800 leading-relaxed mb-6">
+              As an <strong>Industry AI Advisor for Munster Technological University (MTU) Kerry</strong>, Miriam advises academic, industry, and leadership teams on the human, ethical, and practical dimensions of AI integration. Combining 20+ years of executive coaching with certified adaptability credentials (AQai Level 1), she specializes in eliminating workforce resistance, cultivating psychological safety, and designing high-adaptability cultures ready for continuous technological evolution.
+            </p>
+
+            <div class="space-y-2.5 pt-4 border-t border-sand-300/80 text-xs text-sand-700">
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>Munster Technological University (MTU) Kerry:</strong> Industry AI Advisor</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>Certified AQai Adaptability Coach:</strong> Measuring and elevating workforce AQ</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>Greator Festival 2024 Keynote:</strong> Spoke to thousands on personal and organizational transformation</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>Human-in-the-Loop AI Integration:</strong> Overcoming employee fear and resistance</span>
+              </div>
+            </div>
           </div>
 
-          <p class="text-sand-800 leading-relaxed text-sm sm:text-base">
-            Every executive team is under immense pressure to deploy Generative AI, modernize legacy platforms, and scale data initiatives. Yet 80% of enterprise AI projects stall in expensive proof-of-concept limbo or fail because the underlying data architectures and organizational cultures were never built to support them.
-          </p>
+          <div class="mt-8 pt-6 border-t border-sand-300">
+            <span class="text-xs font-semibold text-turtle-900 uppercase tracking-wider">Focus: AI Culture, Human Adaptability & Adoption</span>
+          </div>
+        </div>
 
-          <p class="text-sand-800 leading-relaxed text-sm sm:text-base">
-            Dr. Markus Schmidberger bridges the critical gap between board-level strategy and deep engineering reality. Having scaled cloud and data infrastructure at Amazon Web Services and led 50+ engineers at Scout24, he helps leadership teams cut through vendor marketing, architect scalable platforms, and establish cultures where engineers thrive.
-          </p>
+        <!-- Advisor 2: Dr. Markus Schmidberger -->
+        <div class="rounded-3xl bg-sand-50 p-8 sm:p-10 border-2 border-sand-300 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-turtle-900 text-turtle-200 flex items-center justify-center font-serif text-2xl font-bold shadow-md border border-turtle-700 flex-shrink-0">
+                MS
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-turtle-950">Dr. Markus Schmidberger</h3>
+                <p class="text-xs uppercase tracking-widest text-turtle-700 font-bold mt-0.5">
+                  Data & AI Strategist • Former Director
+                </p>
+              </div>
+            </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-sand-200">
-            <div class="p-4 rounded-xl bg-sand-50 border border-sand-200">
-              <span class="font-bold text-turtle-900 block text-sm">Data Architecture & Cloud</span>
-              <span class="text-xs text-sand-600">Resilient, cost-effective architectures built on AWS, Snowflake, and modern cloud stacks.</span>
+            <p class="text-sm text-sand-800 leading-relaxed mb-6">
+              Holding a <strong>PhD in Bioinformatics and Technical Mathematics</strong>, Markus brings 20 years of hands-on data leadership across high-growth scale-ups, global tech corporations, and cloud hyperscalers. As Director of Data at Scout24 Group, he scaled the data and analytics organization from 15 to 50+ engineers. As a Senior Consultant at Amazon Web Services (AWS) ProServe, he architected large-scale distributed systems and high-throughput data platforms.
+            </p>
+
+            <div class="space-y-2.5 pt-4 border-t border-sand-300/80 text-xs text-sand-700">
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>Scout24 Group:</strong> Director of Data, scaled engineering org 15 → 50+</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>Amazon Web Services (AWS):</strong> Senior Big Data Consultant, ProServe</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>PhD in Bioinformatics:</strong> Deep statistical modeling & distributed computing</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-turtle-700 font-bold">✓</span>
+                <span><strong>Certified Life Trust Coach:</strong> Fusing engineering rigor with executive mentorship</span>
+              </div>
             </div>
-            <div class="p-4 rounded-xl bg-sand-50 border border-sand-200">
-              <span class="font-bold text-turtle-900 block text-sm">Engineering Culture & Velocity</span>
-              <span class="text-xs text-sand-600">Psychological safety, non-punitive incident post-mortems, and zero-panic deployments.</span>
-            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-sand-300">
+            <span class="text-xs font-semibold text-turtle-900 uppercase tracking-wider">Focus: Enterprise Data Platforms, LLM Architecture & Scale</span>
           </div>
         </div>
 
@@ -166,7 +285,7 @@ const dataAiSchema = {
               Data & AI Strategy Roadmap
             </h3>
             <p class="text-sand-700 text-sm leading-relaxed mb-6">
-              Establish an actionable, high-ROI technological roadmap. We identify high-impact AI use cases, audit existing data foundations, and prevent multi-million-euro vendor lock-in.
+              Establish an actionable, high-ROI technological roadmap. We audit data foundation readiness, identify high-impact AI use cases, evaluate LLM architectures, and prevent multi-million-euro vendor lock-in.
             </p>
             <ul class="space-y-2 text-xs text-sand-600">
               <li class="flex items-center gap-2">
@@ -179,7 +298,7 @@ const dataAiSchema = {
               </li>
               <li class="flex items-center gap-2">
                 <span class="text-turtle-600 font-bold">✓</span>
-                <span>Vendor and LLM framework evaluation</span>
+                <span>LLM framework & foundation model audit</span>
               </li>
             </ul>
           </div>
@@ -195,28 +314,28 @@ const dataAiSchema = {
               02
             </div>
             <h3 class="font-serif text-xl font-bold text-turtle-950 mb-3">
-              Scaling High-Performance Tech Teams
+              Human-AI Adoption & Culture
             </h3>
             <p class="text-sand-700 text-sm leading-relaxed mb-6">
-              Scale engineering and data science organizations without communication bottlenecks or culture dilution. Based on the proven playbook that scaled Scout24 from 15 to 50+ engineers.
+              Led by Miriam Schmidberger (Industry AI Advisor for MTU Kerry). Redesign workflows for human-in-the-loop intelligence, measure organizational adaptability, and build high-trust cultures where teams embrace AI without fear.
             </p>
             <ul class="space-y-2 text-xs text-sand-600">
               <li class="flex items-center gap-2">
                 <span class="text-turtle-600 font-bold">✓</span>
-                <span>Agile Scrum enhanced with psychological safety</span>
+                <span>AQai workforce adaptability assessments</span>
               </li>
               <li class="flex items-center gap-2">
                 <span class="text-turtle-600 font-bold">✓</span>
-                <span>Elimination of structural overtime & burnout</span>
+                <span>Overcoming employee resistance & anxiety</span>
               </li>
               <li class="flex items-center gap-2">
                 <span class="text-turtle-600 font-bold">✓</span>
-                <span>Cross-functional alignment with Product & Sales</span>
+                <span>Psychological safety in high-speed change</span>
               </li>
             </ul>
           </div>
           <div class="mt-8 pt-6 border-t border-sand-200">
-            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Leadership Mentorship & Retainer</span>
+            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Change Advisory & Workflows</span>
           </div>
         </div>
 
@@ -230,7 +349,7 @@ const dataAiSchema = {
               Interim CTO & Board Advisory
             </h3>
             <p class="text-sand-700 text-sm leading-relaxed mb-6">
-              Senior executive sounding board for CEOs, founders, and private equity boards. Clear technical translation that eliminates jargon and empowers decisive executive governance.
+              Led by Dr. Markus Schmidberger. Strategic sounding board for CEOs, founders, and private equity boards. Scaling engineering orgs from 15 to 50+ engineers with zero-panic incident governance.
             </p>
             <ul class="space-y-2 text-xs text-sand-600">
               <li class="flex items-center gap-2">
@@ -239,16 +358,16 @@ const dataAiSchema = {
               </li>
               <li class="flex items-center gap-2">
                 <span class="text-turtle-600 font-bold">✓</span>
-                <span>Incident crisis resolution & post-mortem leadership</span>
+                <span>Zero-panic incident crisis management</span>
               </li>
               <li class="flex items-center gap-2">
                 <span class="text-turtle-600 font-bold">✓</span>
-                <span>Executive hiring & technical interview audits</span>
+                <span>Executive tech hiring & org scaling</span>
               </li>
             </ul>
           </div>
           <div class="mt-8 pt-6 border-t border-sand-200">
-            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Board Advisory & Key Retainers</span>
+            <span class="text-xs text-turtle-700 font-semibold uppercase tracking-wider">Format: Board Advisory & Retainers</span>
           </div>
         </div>
 
@@ -264,7 +383,7 @@ const dataAiSchema = {
         Initiate a Confidential Strategic Conversation
       </h2>
       <p class="text-sand-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-        Whether you are planning an enterprise AI transition, scaling a technical team, or seeking board-level advisory, we welcome direct confidential inquiries.
+        Whether you are planning an enterprise AI transition, addressing workforce adoption friction, or seeking board-level technical advisory, we welcome direct confidential inquiries.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -292,4 +411,5 @@ const dataAiSchema = {
   </section>
 
 </Layout>
+
 

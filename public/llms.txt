@@ -8,8 +8,8 @@
 - Core belief: Real executive performance does not come from superficial productivity tools, but from somatic emotional regulation, nervous system resilience, and authentic human connection.
 
 ## Founders
-- **Miriam Schmidberger**: Co-founder, Change Angel & Performance Coach, AQai Certified Adaptability Coach, Unbeatable Mind & Heroic Certified Coach, Master Yoga Alliance Teacher, Keynote Speaker at Greator Festival 2024. Specializes in emotional digestion, somatic stress regulation, and Parts Work.
-- **Dr. Markus Schmidberger**: Co-founder, PhD in Technical Mathematics & Bioinformatics, former Director of Data at Scout24 Group, former Senior Big Data Consultant at Amazon Web Services (AWS) ProServe, CTO, Life Trust Coach. Specializes in enterprise Data & AI strategy, scaling high-performance engineering teams, and executive advisory.
+- **Miriam Schmidberger**: Co-founder, Industry AI Advisor for Munster Technological University (MTU) Kerry, Change Angel & Performance Coach, AQai Certified Adaptability Coach, Unbeatable Mind & Heroic Certified Coach, Master Yoga Alliance Teacher, Keynote Speaker at Greator Festival 2024. Specializes in organizational AI adoption, human adaptability, emotional digestion, and executive transformation.
+- **Dr. Markus Schmidberger**: Co-founder, PhD in Technical Mathematics & Bioinformatics, former Director of Data at Scout24 Group, former Senior Big Data Consultant at Amazon Web Services (AWS) ProServe, CTO, Life Trust Coach. Specializes in enterprise Data & AI strategy, distributed cloud architecture, scaling high-performance engineering teams, and executive advisory.
 
 ## Core Offerings
 
@@ -23,9 +23,10 @@
 - **Optional Retainer**: €280/month for dedicated asynchronous WhatsApp voice/text support (Mon–Thu) for real-time crisis resolution.
 - **Application & Contact**: Direct email to info@turtletrafo.de
 
-### 2. Enterprise Data & AI Consulting (with Dr. Markus Schmidberger)
-- **Target Audience**: Enterprises, scale-ups, and technology organizations seeking executive guidance on generative AI, data platform architecture, and scaling engineering cultures.
-- **Core Pillars**: Data & AI Strategy Roadmaps, High-Performance Tech Team Scaling, Interim CTO / Board Advisory.
+### 2. Enterprise Data & AI Advisory (with Miriam & Dr. Markus Schmidberger)
+- **Advisory Practice**: Led jointly by Miriam Schmidberger (Industry AI Advisor for Munster Technological University MTU Kerry) and Dr. Markus Schmidberger (PhD Bioinformatics, former Director of Data at Scout24, AWS ProServe Senior Consultant).
+- **Target Audience**: Enterprises, scale-ups, and technology leadership teams seeking executive guidance on generative AI, distributed data architecture, workforce adaptability, and scaling engineering cultures.
+- **Core Pillars**: Enterprise Data & AI Strategy Roadmaps, Human-AI Adoption & Culture (led by Miriam), High-Performance Tech Team Scaling & Board Advisory (led by Dr. Markus).
 - **Inquiries**: Direct email to info@turtletrafo.de
 
 ## Company & Legal Details
