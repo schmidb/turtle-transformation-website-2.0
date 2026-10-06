@@ -29,7 +29,7 @@
 ### Brand Identity & Vision
 Turtle Transformation operates **"The Authentic Leader Academy"**, an international coaching, leadership development, and consulting organization founded by Miriam and Dr. Markus Schmidberger. The organization was born from their 20+ year personal and professional leadership journey combining high-level corporate data leadership, agile scaling, and deep human-centric personal transformation.
 
-* **Core Mission:** Run *The Authentic Leader Academy* to empower **1,000,000 individuals** with the skills, experiences, and mindset to become impactful leaders in their organizations, communities, and families.
+* **Core Mission:** Run *The Authentic Leader Academy* to empower leaders with the skills, experiences, and mindset to become impactful leaders in their organizations, communities, and families.
 * **Core Philosophy:** *"Change from the inside to the outside"* — real organizational and personal performance does not come from superficial tools or rigid frameworks, but from emotional self-regulation, inner clarity, and genuine human connection.
 * **Motto & Core Slogans:**
   * *"True Leadership is an Evolving Journey"*
