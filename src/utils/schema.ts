@@ -11,6 +11,9 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const MIRIAM_ID = `${SITE_URL}/about/#miriam-schmidberger`;
 export const MARKUS_ID = `${SITE_URL}/about/#markus-schmidberger`;
 
+export const MIRIAM_LINKEDIN = 'https://www.linkedin.com/in/miriamschmidberger/';
+export const MARKUS_LINKEDIN = 'https://www.linkedin.com/in/schmidberger/';
+
 // Public profiles that identify the entity (LinkedIn, etc.). Add verified URLs here.
 export const SAME_AS: string[] = [
   'https://www.linkedin.com/company/turtletrafo',
@@ -95,7 +98,7 @@ export function personSchemas() {
         'Executive performance coach and Industry AI Advisor for Munster Technological University (MTU) Kerry. Certified AQai Adaptability Coach, Unbeatable Mind & Heroic Certified Coach, Yoga Alliance Master Teacher and Greator Festival 2024 keynote speaker.',
       image: `${SITE_URL}/images/miriam-schmidberger.jpg`,
       url: `${SITE_URL}/about/`,
-      sameAs: ['https://www.linkedin.com/in/miriamschmidberger/'],
+      sameAs: [MIRIAM_LINKEDIN],
       worksFor: { '@id': ORG_ID },
       affiliation: {
         '@type': 'CollegeOrUniversity',
@@ -120,7 +123,7 @@ export function personSchemas() {
         'PhD in Bioinformatics and Technical Mathematics. Former Director of Data at Scout24 Group and Senior Consultant at AWS ProServe.',
       image: `${SITE_URL}/images/markus-schmidberger.jpg`,
       url: `${SITE_URL}/about/`,
-      sameAs: ['https://www.linkedin.com/in/schmidberger/'],
+      sameAs: [MARKUS_LINKEDIN],
       worksFor: { '@id': ORG_ID },
       alumniOf: { '@type': 'CollegeOrUniversity', name: 'Technical University of Munich' },
       knowsAbout: [

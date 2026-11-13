@@ -2,8 +2,9 @@
 // src/pages/data-ai-consulting.astro
 import Layout from '../layouts/Layout.astro';
 import Faq from '../components/Faq.astro';
+import LinkedInLink from '../components/LinkedInLink.astro';
 import { getRelativePath } from '../utils/paths';
-import { faqPageSchema, ORG_ID, MIRIAM_ID, MARKUS_ID, SITE_URL } from '../utils/schema';
+import { faqPageSchema, ORG_ID, MIRIAM_ID, MARKUS_ID, SITE_URL, MIRIAM_LINKEDIN, MARKUS_LINKEDIN } from '../utils/schema';
 import type { FaqItem } from '../utils/schema';
 
 const dataAiSchema = {
@@ -214,6 +215,10 @@ const faqSchema = faqPageSchema(faqItems);
             </div>
           </div>
 
+          <div class="mt-6">
+            <LinkedInLink href={MIRIAM_LINKEDIN} name="Miriam Schmidberger" />
+          </div>
+
           <div class="mt-8 pt-4 border-t border-sand-200/60 text-xs font-semibold text-turtle-900 uppercase tracking-wider">
             Focus: AI Culture, Human Adaptability & Adoption
           </div>
@@ -267,6 +272,10 @@ const faqSchema = faqPageSchema(faqItems);
                 <span><strong>Certified Life Trust Coach:</strong> Fusing technical rigor with executive mentorship</span>
               </div>
             </div>
+          </div>
+
+          <div class="mt-6">
+            <LinkedInLink href={MARKUS_LINKEDIN} name="Dr. Markus Schmidberger" />
           </div>
 
           <div class="mt-8 pt-4 border-t border-sand-200/60 text-xs font-semibold text-turtle-900 uppercase tracking-wider">

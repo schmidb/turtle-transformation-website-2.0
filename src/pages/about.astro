@@ -2,7 +2,8 @@
 // src/pages/about.astro
 import Layout from '../layouts/Layout.astro';
 import { getRelativePath } from '../utils/paths';
-import { MIRIAM_ID, MARKUS_ID, ORG_ID } from '../utils/schema';
+import LinkedInLink from '../components/LinkedInLink.astro';
+import { MIRIAM_ID, MARKUS_ID, ORG_ID, MIRIAM_LINKEDIN, MARKUS_LINKEDIN } from '../utils/schema';
 
 const webPageExtras = {
   about: { '@id': ORG_ID },
@@ -260,6 +261,9 @@ const webPageExtras = {
               <span>→</span>
             </a>
           </div>
+          <div>
+            <LinkedInLink href={MIRIAM_LINKEDIN} name="Miriam Schmidberger" />
+          </div>
         </div>
       </div>
 
@@ -287,6 +291,9 @@ const webPageExtras = {
               <span>Explore AI & Data Advisory with Miriam & Markus</span>
               <span>→</span>
             </a>
+          </div>
+          <div>
+            <LinkedInLink href={MARKUS_LINKEDIN} name="Dr. Markus Schmidberger" />
           </div>
         </div>
 
