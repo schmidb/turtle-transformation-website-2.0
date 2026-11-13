@@ -48,7 +48,7 @@ export function organizationSchema() {
     },
     image: `${SITE_URL}/og-image.png`,
     description:
-      'Executive coaching and Data & AI advisory for senior leaders, founders and engineering organisations. Based in County Kerry, Ireland; working worldwide.',
+      'Executive coaching and AI & Data Advisory for senior leaders, founders and engineering organisations. Based in County Kerry, Ireland; working worldwide.',
     email: 'info@turtletrafo.com',
     address: {
       '@type': 'PostalAddress',
@@ -115,7 +115,7 @@ export function personSchemas() {
       '@id': MARKUS_ID,
       name: 'Dr. Markus Schmidberger',
       honorificPrefix: 'Dr.',
-      jobTitle: 'Enterprise Data & AI Consultant / Co-Founder',
+      jobTitle: 'Enterprise AI & Data Consultant / Co-Founder',
       description:
         'PhD in Bioinformatics and Technical Mathematics. Former Director of Data at Scout24 Group and Senior Consultant at AWS ProServe.',
       image: `${SITE_URL}/images/markus-schmidberger.jpg`,
