@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-// When previewing on GitHub Pages subfolder (https://schmidb.github.io/turtle-transformation-website-2.0/),
-// base must be set to '/turtle-transformation-website-2.0'.
-// Once custom domain DNS for turtletrafo.com is switched, set USE_CUSTOM_DOMAIN=true to deploy at root '/'.
+// Production runs on the custom domain https://turtletrafo.com and MUST be built with USE_CUSTOM_DOMAIN=true (site root '/').
+// Without the flag the build targets the github.io preview sub-path '/turtle-transformation-website-2.0' (local dev only).
+// The GitHub repo variable USE_CUSTOM_DOMAIN must stay 'true'. See README.md and docs/infrastructure.md.
 const isCustomDomain = process.env.USE_CUSTOM_DOMAIN === 'true';
 export default defineConfig({
   site: isCustomDomain ? 'https://turtletrafo.com' : 'https://schmidb.github.io',
