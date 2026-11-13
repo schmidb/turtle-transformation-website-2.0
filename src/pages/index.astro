@@ -1,5 +1,4 @@
 ---
-// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 import Faq from '../components/Faq.astro';
 import { getRelativePath } from '../utils/paths';
@@ -9,30 +8,37 @@ import type { FaqItem } from '../utils/schema';
 const coachingServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: '12-Month High Performance Executive Coaching Program',
+  name: '12-Month Executive Coaching',
   '@id': `${SITE_URL}/#coaching-program`,
   url: `${SITE_URL}/`,
   serviceType: 'Executive Coaching',
   provider: [{ '@id': MIRIAM_ID }, { '@id': ORG_ID }],
-  description: 'A tailored 12-month coaching partnership for senior executives and founders to transition from reactive firefighting to calm, grounded, high-leverage effectiveness.',
+  description: 'A 12-month executive coaching program for senior leaders and founders.',
   areaServed: 'Worldwide',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Coaching Packages',
+    name: 'Executive Coaching Offers',
     itemListElement: [
       {
         '@type': 'Offer',
-        name: 'Core 12-Month Program',
-        price: '4700',
+        name: '12-Month Executive Coaching Program',
+        price: '5400',
         priceCurrency: 'EUR',
-        description: 'Includes 12x 60-min strategic sessions, 12x 30-min practical sessions, and two diagnostic assessments.',
+        description: 'Twelve monthly 60-minute coaching sessions, twelve 30-minute practical application and training sessions, and two baseline assessments. Payable in two installments of €2,700.',
       },
       {
         '@type': 'Offer',
-        name: 'Executive Retainer Tier (with Asynchronous WhatsApp Support)',
-        price: '8060',
+        name: 'Asynchronous Tuesday and Thursday Support',
+        price: '280',
         priceCurrency: 'EUR',
-        description: 'Core program plus €280/month for dedicated Mon-Thu real-time WhatsApp audio/text advisory.',
+        description: 'Optional asynchronous support, available Tuesday and Thursday, billed monthly.',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Additional Individual Session',
+        price: '450',
+        priceCurrency: 'EUR',
+        description: 'Optional additional individual sessions, billed per hour.',
       },
     ],
   },
@@ -40,656 +46,164 @@ const coachingServiceSchema = {
 
 const faqItems: FaqItem[] = [
   {
-    question: 'How much does the 12-month executive coaching cost?',
-    answer: 'The core 12-month program costs €4,700 in total, payable in two installments of €2,350 with a formal 6-month progress audit. An optional executive retainer adds dedicated Monday to Thursday WhatsApp voice and text support for €280 per month. Official VAT invoices are issued by Turtle Transformation Limited (Ireland).',
+    question: 'What does the 12-month executive coaching program cost?',
+    answer: 'The core 12-month program costs €5,400, payable in two installments of €2,700.',
   },
   {
-    question: 'Who is the 12-month coaching program for?',
-    answer: 'It is designed for senior directors, VPs, C-suite executives, technology leaders and ambitious founders who want to shift from reactive firefighting to calm, intentional, high-leverage leadership.',
+    question: 'What is included?',
+    answer: 'The program includes the AQai Adaptability Assessment, the Five-Mountain Leadership Assessment, one 60-minute coaching session each month, and one 30-minute practical application and training session each month.',
   },
   {
-    question: 'What is included in the 12-month program?',
-    answer: 'Two baseline assessments (AQai Adaptability and Five-Mountain Leadership), twelve 60-minute strategic coaching sessions, twelve 30-minute practical application sessions, and custom exercises, somatic practices and reading.',
+    question: 'Is support available between sessions?',
+    answer: 'Optional asynchronous support is available on Tuesday and Thursday for €280 per month.',
   },
   {
-    question: 'How much time does this program demand per week?',
-    answer: 'The program is specifically engineered for time-poor leaders. Monthly commitments include one 60-minute strategic session and one 30-minute practical application session. Rather than adding to your workload, the Pareto 80/20 framework routinely frees up 5 to 10 hours of wasted operational firefighting each week.',
+    question: 'Can I book additional time?',
+    answer: 'Additional individual sessions are available at €450 per hour.',
   },
   {
-    question: 'Can my employer fund or sponsor my coaching?',
-    answer: 'Yes. Many of our clients have their 12-month program covered via executive development, leadership training, or education budgets. Invoices are issued by Turtle Transformation Limited (Ireland) and include formal VAT documentation.',
+    question: 'Who is the program for?',
+    answer: 'The program is for senior leaders and founders who want dedicated space to examine their leadership practice and priorities over 12 months.',
   },
   {
-    question: 'What occurs during the initial Discovery Call?',
-    answer: 'The 30-minute discovery call is a confidential, zero-pressure diagnostic conversation. We explore your current leadership stressors, your team dynamics, and evaluate mutual fit. We only offer places in the 12-month program when we are certain we can deliver a profound transformation.',
-  },
-  {
-    question: 'Are sessions conducted virtually or in person?',
-    answer: 'Delivery is hybrid. The majority of sessions take place over private video conferencing with leaders worldwide. Clients are also welcome to arrange in-person VIP immersion days in County Kerry, Ireland.',
-  },
-  {
-    question: 'Who will I be working with?',
-    answer: 'You work directly with Miriam Schmidberger, an executive performance coach with over 20 years of experience, Industry AI Advisor for Munster Technological University (MTU) Kerry, certified AQai Adaptability Coach and Greator Festival 2024 keynote speaker.',
+    question: 'How do I request a conversation?',
+    answer: 'Email info@turtletrafo.com to request a confidential conversation. You will receive a response within 48 hours.',
   },
 ];
 
 const faqSchema = faqPageSchema(faqItems);
 ---
 
-<Layout 
-  title="Executive Coaching with Miriam Schmidberger | Turtle Transformation"
-  description="12-month executive coaching for senior leaders and founders: shift from reactive firefighting to calm, high-leverage leadership. €4,700, online or in Kerry."
+<Layout
+  title="12-Month Executive Coaching | Turtle Transformation"
+  description="A 12-month executive coaching program for senior leaders and founders. €5,400 in two €2,700 installments."
   jsonLd={[coachingServiceSchema, faqSchema]}
 >
-
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-sand-100/50 via-sand-50 to-sand-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      
-      <!-- Pre-header Label -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sand-200/70 text-turtle-900 text-xs font-semibold tracking-wider uppercase mb-8">
-        <span>The Authentic Leader Academy</span>
-        <span>•</span>
-        <span>12-Month Executive Partnership</span>
+  <section class="relative overflow-hidden bg-sand-50 pt-16 pb-16 sm:pt-24 sm:pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.18em] font-semibold text-turtle-700 mb-5">The Authentic Leader Academy</p>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.08] text-turtle-950 tracking-tight">A year to lead with more clarity.</h1>
+        <p class="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-sand-700">A focused 12-month coaching partnership with Miriam Schmidberger for senior leaders and founders. Make room for thoughtful decisions, clear boundaries, and leadership practices that fit the work in front of you.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
+          <a href="mailto:info@turtletrafo.com?subject=Request%20a%20confidential%20conversation" class="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center rounded-full bg-turtle-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-turtle-800">Request a confidential conversation</a>
+          <a href="#program" class="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center rounded-full border border-sand-300 px-6 py-3 text-sm font-semibold text-turtle-900 transition-colors hover:bg-sand-100">See the program</a>
+        </div>
+        <p class="mt-4 text-sm text-sand-600">Email <a href="mailto:info@turtletrafo.com" class="font-medium text-turtle-900 underline underline-offset-4">info@turtletrafo.com</a>. A confidential response within 48 hours.</p>
       </div>
+    </div>
+  </section>
 
-      <!-- Main Headline -->
-      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-turtle-950 leading-[1.15] text-balance mb-6">
-        Shift from Reactive Firefighting to <span class="italic font-normal text-turtle-800">Calm, High-Impact</span> Leadership.
-      </h1>
-
-      <!-- Subheadline -->
-      <p class="max-w-2xl mx-auto text-base sm:text-lg lg:text-xl text-sand-700 leading-relaxed text-balance mb-10 font-normal">
-        A bespoke 12-month coaching partnership with <strong class="text-turtle-950 font-semibold">Miriam Schmidberger</strong> for senior directors, C-suite executives, and high-growth founders. Decouple high-stakes pressure from physiological panic, establish unshakeable boundaries, and achieve effortless strategic leverage.
-      </p>
-
-      <!-- Primary Action CTAs -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8">
-        <a 
-          href="mailto:info@turtletrafo.com?subject=12-Month%20Coaching%20Application%20-%20Discovery%20Call" 
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white bg-turtle-900 hover:bg-turtle-800 active:bg-turtle-950 shadow-sm hover:shadow transition-all min-h-[50px]"
-        >
-          <svg class="w-4 h-4 text-turtle-200" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          <span>Apply via Email: info@turtletrafo.com</span>
-        </a>
-        <a 
-          href="#program" 
-          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-semibold text-turtle-900 bg-white hover:bg-sand-100 border border-sand-300 transition-all min-h-[50px]"
-        >
-          Explore Framework
-        </a>
-      </div>
-
-      <!-- Quick Contact Microcopy -->
-      <p class="text-xs text-sand-600 mb-16">
-        Direct confidential executive contact: <a href="mailto:info@turtletrafo.com" class="text-turtle-900 underline underline-offset-4 decoration-sand-400 font-medium">info@turtletrafo.com</a>
-      </p>
-
-      <!-- Clean Metrics Bar -->
-      <div class="pt-10 border-t border-sand-200/80 grid grid-cols-2 md:grid-cols-4 gap-8 text-center sm:text-left">
+  <section aria-labelledby="evidence-title" class="border-y border-sand-200 bg-white py-14 sm:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-8">
         <div>
-          <div class="font-serif text-3xl font-normal text-turtle-950">20+ Years</div>
-          <div class="text-xs uppercase tracking-wider text-sand-600 font-medium mt-1">Leadership Mastery</div>
+          <p class="text-xs uppercase tracking-[0.18em] font-semibold text-turtle-700">Client evidence</p>
+          <h2 id="evidence-title" class="mt-2 font-serif text-3xl text-turtle-950">What clients share</h2>
         </div>
-        <div>
-          <div class="font-serif text-3xl font-normal text-turtle-950">AQai</div>
-          <div class="text-xs uppercase tracking-wider text-sand-600 font-medium mt-1">Certified Adaptability</div>
-        </div>
-        <div>
-          <div class="font-serif text-3xl font-normal text-turtle-950">Greator '24</div>
-          <div class="text-xs uppercase tracking-wider text-sand-600 font-medium mt-1">Keynote Speaker</div>
-        </div>
-        <div>
-          <div class="font-serif text-3xl font-normal text-turtle-950">Global</div>
-          <div class="text-xs uppercase tracking-wider text-sand-600 font-medium mt-1">Virtual & Kerry, IE</div>
-        </div>
+        <p class="max-w-md text-sm leading-relaxed text-sand-700">Short, client-approved reflections on the coaching experience.</p>
       </div>
-
-    </div>
-  </section>
-
-  <!-- The Executive Shift Section -->
-  <section class="py-24 bg-white border-y border-sand-200/60">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">The Leadership Shift</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-turtle-950 mt-2 mb-4 tracking-tight">
-          Why Traditional Executive Coaching Fails Under Pressure
-        </h2>
-        <p class="text-sand-700 leading-relaxed text-sm sm:text-base">
-          Most coaching treats leadership as an intellectual exercise in calendars and KPIs. But when high-stakes organizational crises strike, cognitive frameworks collapse. Real leadership transformation begins with nervous system regulation, emotional digestion, and deep self-trust.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-        
-        <!-- The Overworked State -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-sand-50/70 border border-sand-200/80 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="text-xs uppercase tracking-wider font-semibold text-sand-600 mb-3">
-              The Reactive Status Quo
-            </div>
-            <h3 class="font-serif text-2xl font-normal text-turtle-950 mb-6">
-              Managing from Overload & Fear
-            </h3>
-            <ul class="space-y-4 text-sm text-sand-700">
-              <li class="flex items-start gap-3">
-                <span class="text-sand-400 mt-1 text-xs">•</span>
-                <span><strong>Operational Firefighting:</strong> Consumed by urgent escalations and systemic overtime, leaving zero space for strategic foresight.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-sand-400 mt-1 text-xs">•</span>
-                <span><strong>Physiological Shutdown:</strong> Live production crises trigger fight-or-flight panic, cognitive tunnel vision, and insomnia.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-sand-400 mt-1 text-xs">•</span>
-                <span><strong>Porous Boundaries:</strong> Sacrificing family presence, health, and rest due to unwritten corporate expectations.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-sand-400 mt-1 text-xs">•</span>
-                <span><strong>Micromanagement Bottlenecks:</strong> Fear of mistakes creates team dependency, burnout, and unnecessary turnover.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- The Grounded State -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-turtle-950 text-sand-100 border border-turtle-900 shadow-md flex flex-col justify-between">
-          <div>
-            <div class="text-xs uppercase tracking-wider font-semibold text-turtle-300 mb-3">
-              The 12-Month Transformation
-            </div>
-            <h3 class="font-serif text-2xl font-normal text-white mb-6">
-              The Grounded Authentic Leader
-            </h3>
-            <ul class="space-y-4 text-sm text-sand-200">
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-400 mt-1 text-xs">✓</span>
-                <span><strong>Pareto 80/20 Leverage:</strong> Focusing relentlessly on the 20% of strategic levers that generate 80% of enterprise outcomes.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-400 mt-1 text-xs">✓</span>
-                <span><strong>Emotional Regulation:</strong> Active emotional digestion replacing panic with calm, anchored executive composure.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-400 mt-1 text-xs">✓</span>
-                <span><strong>Contractual Agency:</strong> Unshakeable boundaries that protect personal stamina while earning deep organizational respect.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-400 mt-1 text-xs">✓</span>
-                <span><strong>Autonomous Teams:</strong> Psychological safety that empowers teams to run independently without fear of failure.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Core Principle Callout -->
-      <div class="mt-16 text-center max-w-xl mx-auto">
-        <blockquote class="font-serif italic text-lg sm:text-xl text-turtle-900 leading-relaxed">
-          &ldquo;Slow is smooth, and smooth is fast. When you cultivate inner stillness, your speed of high-stakes decision making accelerates dramatically.&rdquo;
-        </blockquote>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Program Architecture Section -->
-  <section id="program" class="py-24 bg-sand-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="max-w-2xl mx-auto text-center mb-16">
-        <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">The Curriculum</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-turtle-950 mt-2 mb-4 tracking-tight">
-          The 12-Month Executive Architecture
-        </h2>
-        <p class="text-sand-700 leading-relaxed text-sm sm:text-base">
-          A phased, systematic methodology that transforms both your internal neuro-emotional state and your outward leadership impact.
-        </p>
-      </div>
-
-      <!-- Preparatory Phase Baseline Card -->
-      <div class="mb-10 p-8 sm:p-10 rounded-2xl bg-white border border-sand-200/80 shadow-sm">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-sand-200/60">
-          <div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-turtle-700">Diagnostic Baseline • Weeks 1 – 2</span>
-            <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1">Preparatory Diagnostics Before Kickoff</h3>
-            <p class="text-xs text-sand-600 mt-1">Establishing baseline metrics, blind spots, and growth tracks.</p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <div class="p-6 rounded-xl bg-sand-50/60 border border-sand-200/60">
-            <h4 class="font-serif text-base font-semibold text-turtle-950 mb-2">
-              1. Adaptability Assessment (AQai)
-            </h4>
-            <p class="text-xs text-sand-700 leading-relaxed">
-              Measures your Adaptability Quotient (AQ)—the vital leadership metric for navigating unscripted volatility, tech disruption, and high-frequency change without cognitive exhaustion.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-xl bg-sand-50/60 border border-sand-200/60">
-            <h4 class="font-serif text-base font-semibold text-turtle-950 mb-2">
-              2. Five-Mountain Leadership Assessment
-            </h4>
-            <p class="text-xs text-sand-700 leading-relaxed">
-              Holistic audit evaluating five vital dimensions: Physical resilience, Mental clarity, Emotional agility, Strategic intuition, and Integrated execution (Kokoro / warrior heart).
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Four Core Pillars Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        
-        <!-- Pillar 1 -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-white border border-sand-200/80 shadow-sm">
-          <div class="font-serif text-2xl text-sand-400 mb-4">01</div>
-          <h3 class="font-serif text-xl font-normal text-turtle-950 mb-3">
-            Cognitive Restructuring & Habits
-          </h3>
-          <p class="text-sand-700 text-xs sm:text-sm leading-relaxed mb-4">
-            Identify and dismantle subconscious drivers, habitual procrastination loops, and automatic reaction patterns under high corporate pressure.
-          </p>
-          <ul class="text-xs text-sand-600 space-y-2">
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Dismantling childhood-inherited compliance drivers</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Replacing over-functioning with deliberate strategic prioritization</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-white border border-sand-200/80 shadow-sm">
-          <div class="font-serif text-2xl text-sand-400 mb-4">02</div>
-          <h3 class="font-serif text-xl font-normal text-turtle-950 mb-3">
-            Somatic Stress Regulation
-          </h3>
-          <p class="text-sand-700 text-xs sm:text-sm leading-relaxed mb-4">
-            Decouple acute business triggers from physiological stress responses (cortisol/adrenaline spikes) using Parts Work, IFS principles, and embodied somatic tools.
-          </p>
-          <ul class="text-xs text-sand-600 space-y-2">
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Processing panic and despair safely without shutting down</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Reclaiming cognitive clarity in high-stakes board or investor meetings</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-white border border-sand-200/80 shadow-sm">
-          <div class="font-serif text-2xl text-sand-400 mb-4">03</div>
-          <h3 class="font-serif text-xl font-normal text-turtle-950 mb-3">
-            High-Impact Dialogue & Boundaries
-          </h3>
-          <p class="text-sand-700 text-xs sm:text-sm leading-relaxed mb-4">
-            Master non-violent communication (NVC) and structured boundary negotiation to eliminate passive-aggressive friction and navigate stakeholder politics.
-          </p>
-          <ul class="text-xs text-sand-600 space-y-2">
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Mastering the 3 Structured Reflection Questions for boundary defense</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Speaking truth without defensive withholding or fear of backlash</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-white border border-sand-200/80 shadow-sm">
-          <div class="font-serif text-2xl text-sand-400 mb-4">04</div>
-          <h3 class="font-serif text-xl font-normal text-turtle-950 mb-3">
-            Team Performance & Safety
-          </h3>
-          <p class="text-sand-700 text-xs sm:text-sm leading-relaxed mb-4">
-            Transition from control-oriented management to cultivating an autonomous, high-retention engineering/business culture through enhanced empathy and trust.
-          </p>
-          <ul class="text-xs text-sand-600 space-y-2">
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Non-punitive mistake analysis that accelerates team velocity</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-turtle-600">•</span>
-              <span>Proven track record: Drastic reduction in employee sick days & turnover</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Program Delivery & Cadence Details -->
-      <div class="p-8 sm:p-10 rounded-2xl bg-turtle-950 text-sand-100 border border-turtle-900">
-        <h3 class="font-serif text-2xl font-normal text-white mb-6 text-center">
-          Program Delivery & Logistics
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:text-left">
-          
-          <div class="space-y-1.5">
-            <div class="text-turtle-300 font-semibold text-xs uppercase tracking-wider">Duration</div>
-            <div class="text-lg font-normal text-white font-serif">12 Full Months</div>
-            <p class="text-xs text-sand-300 leading-relaxed pt-1">
-              Deep, sustainable habit integration ensuring complete leadership self-sufficiency and independence by month 12.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <div class="text-turtle-300 font-semibold text-xs uppercase tracking-wider">Monthly Cadence</div>
-            <div class="text-lg font-normal text-white font-serif">2 Dedicated Sessions</div>
-            <p class="text-xs text-sand-300 leading-relaxed pt-1">
-              1x 60-min Strategic Deep-Dive plus 1x 30-min Practical Operational Implementation session each month.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <div class="text-turtle-300 font-semibold text-xs uppercase tracking-wider">Delivery Format</div>
-            <div class="text-lg font-normal text-white font-serif">Hybrid Worldwide</div>
-            <p class="text-xs text-sand-300 leading-relaxed pt-1">
-              Delivered via private video conferencing worldwide, with optional VIP in-person immersion in County Kerry, Ireland.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Investment & Commitment Section -->
-  <section class="py-24 bg-white border-b border-sand-200/60">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-16">
-        <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">Transparent Pricing</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-turtle-950 mt-2 mb-3 tracking-tight">
-          Investment & Partnership Options
-        </h2>
-        <p class="text-sand-700 text-sm sm:text-base">
-          Structured for tangible personal ROI, sustainable energy, and organizational velocity.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-        
-        <!-- Base Package -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-sand-50/70 border border-sand-200/80 flex flex-col justify-between">
-          <div>
-            <div class="text-xs uppercase tracking-wider font-semibold text-sand-600">Core Executive Partnership</div>
-            <h3 class="font-serif text-2xl font-normal text-turtle-950 mt-1 mb-2">12-Month Coaching</h3>
-            <div class="my-4">
-              <span class="text-4xl font-normal text-turtle-950 font-serif">€4,700</span>
-              <span class="text-sand-600 text-sm"> / full year</span>
-            </div>
-            <p class="text-xs text-sand-600 mb-6">
-              Payable in two installments of €2,350 with a formal 6-month progress audit.
-            </p>
-            <ul class="space-y-3 text-xs sm:text-sm text-sand-700 border-t border-sand-200/60 pt-6">
-              <li class="flex items-center gap-2">
-                <span class="text-turtle-700 font-bold">✓</span>
-                <span>Both Baseline Assessments (AQai & Five-Mountain)</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-turtle-700 font-bold">✓</span>
-                <span>12x 60-min Strategic Coaching Sessions</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-turtle-700 font-bold">✓</span>
-                <span>12x 30-min Practical Application Sessions</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-turtle-700 font-bold">✓</span>
-                <span>Custom exercises, somatic practices & reading</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-turtle-700 font-bold">✓</span>
-                <span>Corporate VAT invoices issued for employer sponsorship</span>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-6 border-t border-sand-200/60">
-            <a 
-              href="mailto:info@turtletrafo.com?subject=Application%20-%2012-Month%20Coaching%20Program%20(Core)" 
-              class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-full text-xs uppercase tracking-wider font-semibold text-turtle-900 bg-sand-200 hover:bg-sand-300 transition-colors min-h-[46px]"
-            >
-              Apply via info@turtletrafo.com
-            </a>
-          </div>
-        </div>
-
-        <!-- Premium Package with Asynchronous WhatsApp -->
-        <div class="p-8 sm:p-10 rounded-2xl bg-turtle-950 text-sand-100 border border-turtle-900 flex flex-col justify-between relative shadow-md">
-          <div>
-            <div class="text-xs uppercase tracking-wider font-semibold text-turtle-300">Executive Retainer + Real-Time Access</div>
-            <h3 class="font-serif text-2xl font-normal text-white mt-1 mb-2">Continuous Support Tier</h3>
-            <div class="my-4">
-              <span class="text-4xl font-normal text-white font-serif">€4,700</span>
-              <span class="text-sand-300 text-sm"> + €280/mo retainer</span>
-            </div>
-            <p class="text-xs text-sand-300 mb-6">
-              Includes full core program plus real-time between-session support for immediate crisis feedback.
-            </p>
-            <ul class="space-y-3 text-xs sm:text-sm text-sand-200 border-t border-turtle-900 pt-6">
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span><strong>Everything in Core Program</strong></span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span><strong>Dedicated WhatsApp Voice/Text Access</strong> (Mon–Thu)</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span>Same-day tactical feedback for board meetings & crisis disputes</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span>Weekly habit and somatic accountability check-ins</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span>Priority scheduling for urgent calendar realignments</span>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-6 border-t border-turtle-900">
-            <a 
-              href="mailto:info@turtletrafo.com?subject=Application%20-%2012-Month%20Coaching%20with%20WhatsApp%20Retainer" 
-              class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-full text-xs uppercase tracking-wider font-semibold text-turtle-950 bg-sand-200 hover:bg-white transition-colors min-h-[46px]"
-            >
-              Apply via info@turtletrafo.com
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Corporate Sponsorship Note -->
-      <div class="mt-8 text-center text-xs text-sand-600">
-        <p>
-          * Corporate Sponsorship: Most clients expense this program under executive professional development or leadership education budgets. Official VAT invoices issued directly to your corporate entity.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Living Case Study: Dr. Markus Schmidberger -->
-  <section class="py-24 bg-sand-50 border-b border-sand-200/60">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">Real-World Proof</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-turtle-950 mt-2 mb-3 tracking-tight">
-          A 15-Year Living Executive Case Study
-        </h2>
-        <p class="text-sand-700 leading-relaxed text-sm">
-          How Miriam's coaching transformed an academic researcher into a grounded Director of Data leading 50+ engineers at Scout24 and AWS.
-        </p>
-      </div>
-
-      <div class="bg-white p-8 sm:p-12 rounded-2xl border border-sand-200/80 shadow-sm">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          <div class="md:col-span-4 flex flex-col items-center sm:items-start text-center sm:text-left">
-            <div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-full md:h-64 rounded-xl overflow-hidden border border-sand-200 shadow-sm mb-4 bg-sand-100 flex-shrink-0">
-              <picture>
-                <source srcset={getRelativePath('/images/markus-schmidberger.webp')} type="image/webp" />
-                <img 
-                  src={getRelativePath('/images/markus-schmidberger.jpg')} 
-                  alt="Dr. Markus Schmidberger" 
-                  class="w-full h-full object-cover object-top" 
-                  loading="lazy" 
-                  width="772" 
-                  height="1000" 
-                />
-              </picture>
-            </div>
-            <h3 class="font-serif text-2xl font-normal text-turtle-950">Dr. Markus Schmidberger</h3>
-            <p class="text-xs text-turtle-700 font-medium uppercase tracking-wider mt-1">
-              Former Director of Data at Scout24 Group • Senior Consultant at AWS ProServe • PhD Bioinformatics
-            </p>
-          </div>
-
-          <div class="md:col-span-8 space-y-6">
-            <blockquote class="text-sand-800 text-base sm:text-lg leading-relaxed italic border-l-2 border-turtle-700 pl-4 py-1">
-              &ldquo;Especially in high-pressure moments—such as our major data incident at Scout24—certain situations used to trigger acute panic in me. Miriam helped me calm down, step back from emotional intensity, and make clear decisions from a grounded place rather than reacting from fear. 
-              <br><br>
-              As I scaled my organization from zero to 60 people, her coaching moved me from passive hearing to genuine active listening. She pushed me to clean up my own unresolved topics first—because you cannot lead effectively while projecting anxieties onto your team. That psychological safety became the hallmark of our organization, resulting in reduced employee sick days and zero burnout.&rdquo;
-            </blockquote>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-sand-200/60 text-xs">
-              <div>
-                <span class="font-semibold text-turtle-950 block">Crisis Regulation</span>
-                <span class="text-sand-600">Decoupled severe technical escalations from emotional panic.</span>
-              </div>
-              <div>
-                <span class="font-semibold text-turtle-950 block">Scaled from 15 to 50+</span>
-                <span class="text-sand-600">Built autonomous data teams with psychological safety.</span>
-              </div>
-              <div>
-                <span class="font-semibold text-turtle-950 block">Zero Burnout</span>
-                <span class="text-sand-600">Eliminated structural overtime while scaling output.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Meet Your Coach: Miriam Schmidberger -->
-  <section class="py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-        
-        <div class="md:col-span-5">
-          <div class="relative rounded-2xl overflow-hidden border border-sand-200 shadow-md bg-sand-100">
-            <picture>
-              <source srcset={getRelativePath('/images/miriam-schmidberger.webp')} type="image/webp" />
-              <img 
-                src={getRelativePath('/images/miriam-schmidberger.jpg')} 
-                alt="Miriam Schmidberger - Executive Performance Coach & Industry AI Advisor" 
-                class="w-full h-96 sm:h-[460px] object-cover object-top" 
-                loading="lazy" 
-                width="676" 
-                height="1000" 
-              />
-            </picture>
-            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-turtle-950/95 via-turtle-950/80 to-transparent p-6 text-white">
-              <div class="font-serif text-2xl text-sand-100 font-normal">Miriam Schmidberger</div>
-              <p class="text-xs text-turtle-300 font-medium mt-0.5">Change Angel & Executive Performance Coach</p>
-              <div class="mt-3 pt-3 border-t border-turtle-800/80 text-[11px] text-sand-300 grid grid-cols-2 gap-x-2 gap-y-1">
-                <span>• 20+ Yrs Coaching</span>
-                <span>• MTU Kerry AI Advisor</span>
-                <span>• Greator '24 Keynote</span>
-                <span>• Certified AQai Coach</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="md:col-span-7 space-y-5">
-          <div>
-            <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">Meet Your Coach</span>
-            <h2 class="font-serif text-3xl font-normal text-turtle-950 mt-1">
-              Miriam Schmidberger
-            </h2>
-            <p class="text-turtle-800 font-medium text-xs uppercase tracking-wider mt-0.5">
-              Change Angel & Executive Performance Coach • Industry AI Advisor (MTU Kerry)
-            </p>
-          </div>
-
-          <p class="text-sand-800 leading-relaxed text-sm sm:text-base">
-            For over two decades, Miriam has guided executives, entrepreneurs, and leadership teams through profound personal and professional reinvention. Her work operates where traditional consulting stops: in the nervous system, in emotional digestion, and in the subconscious patterns that govern decision-making under stress.
-          </p>
-
-          <p class="text-sand-800 leading-relaxed text-sm sm:text-base">
-            Having keynote-spoken on major international stages—including the <strong>Greator Festival 2024</strong> alongside Tony Robbins—Miriam also serves as an <strong>Industry AI Advisor for Munster Technological University (MTU) Kerry</strong>, guiding leadership teams through workforce adaptability and human-machine integration.
-          </p>
-
-          <div class="pt-2">
-            <a 
-              href={getRelativePath('/data-ai-consulting')} 
-              class="inline-flex items-center gap-1.5 py-3 text-xs font-semibold text-turtle-900 hover:text-turtle-700 underline underline-offset-4"
-            >
-              <span>Explore Enterprise Data & AI Advisory with Miriam & Markus</span>
-              <span>→</span>
-            </a>
-          </div>
-
-        </div>
-
+      <div class="grid gap-4 md:grid-cols-3">
+        <article class="border-t-2 border-turtle-800 bg-sand-50 p-6">
+          <p class="text-sm font-semibold text-turtle-950">Alexandra</p>
+          <p class="mt-3 text-sm text-sand-700">Video testimonial</p>
+          <p class="mt-5 text-sm font-medium text-turtle-800" aria-label="Rated 5 out of 5">5/5</p>
+        </article>
+        <article class="border-t-2 border-turtle-800 bg-sand-50 p-6">
+          <p class="text-sm font-semibold text-turtle-950">Anna</p>
+          <p class="mt-3 text-sm leading-relaxed text-sand-700">Written testimonial about Miriam's steady guidance while retaining ownership of her own direction.</p>
+          <p class="mt-5 text-sm font-medium text-turtle-800" aria-label="Rated 5 out of 5">5/5</p>
+        </article>
+        <article class="border-t-2 border-turtle-800 bg-sand-50 p-6">
+          <p class="text-sm font-semibold text-turtle-950">Torsten Niedermeyer</p>
+          <p class="mt-3 text-sm text-sand-700">Video testimonial</p>
+          <p class="mt-5 text-sm font-medium text-turtle-800" aria-label="Rated 4 out of 5">4/5</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <Faq items={faqItems} intro="Everything you need to know before initiating a coaching partnership." />
+  <section id="program" class="bg-sand-50 py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <p class="text-xs uppercase tracking-[0.18em] font-semibold text-turtle-700">The program</p>
+          <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-turtle-950">A practical monthly rhythm.</h2>
+          <p class="mt-5 text-sm sm:text-base leading-relaxed text-sand-700">The work begins with two baseline assessments, then creates a regular space to consider priorities, communication, habits, and the situations that need your attention.</p>
+        </div>
+        <div class="lg:col-span-7 grid gap-4 sm:grid-cols-2">
+          <div class="border border-sand-200 bg-white p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-turtle-700">Starting point</p>
+            <h3 class="mt-2 font-serif text-xl text-turtle-950">Two baseline assessments</h3>
+            <p class="mt-3 text-sm leading-relaxed text-sand-700">AQai Adaptability Assessment and Five-Mountain Leadership Assessment.</p>
+          </div>
+          <div class="border border-sand-200 bg-white p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-turtle-700">Monthly cadence</p>
+            <h3 class="mt-2 font-serif text-xl text-turtle-950">90 minutes together</h3>
+            <p class="mt-3 text-sm leading-relaxed text-sand-700">One 60-minute coaching session plus one 30-minute practical application and training session.</p>
+          </div>
+          <div class="border border-sand-200 bg-white p-6 sm:col-span-2">
+            <p class="text-xs font-semibold uppercase tracking-wider text-turtle-700">Working map</p>
+            <div class="mt-3 grid gap-3 sm:grid-cols-3 text-sm leading-relaxed text-sand-700">
+              <p><strong class="text-turtle-950">Notice.</strong> Identify patterns, pressures, and priorities.</p>
+              <p><strong class="text-turtle-950">Practice.</strong> Apply reflection, communication, and regulation tools to current work.</p>
+              <p><strong class="text-turtle-950">Review.</strong> Return to what is changing and choose the next useful action.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Final Call to Action -->
-  <section class="py-24 sm:py-28 bg-turtle-950 text-sand-100">
+  <section class="bg-white py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-4">
+          <p class="text-xs uppercase tracking-[0.18em] font-semibold text-turtle-700">Investment</p>
+          <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-turtle-950">Clear pricing.</h2>
+          <p class="mt-4 text-sm leading-relaxed text-sand-700">The core program covers a full year of structured coaching. Optional support and additional sessions are priced separately.</p>
+        </div>
+        <div class="lg:col-span-8 grid gap-4 md:grid-cols-3">
+          <div class="border border-sand-200 p-6">
+            <p class="text-xs uppercase tracking-wider font-semibold text-turtle-700">Core program</p>
+            <p class="mt-3 font-serif text-3xl text-turtle-950">€5,400</p>
+            <p class="mt-2 text-sm leading-relaxed text-sand-700">Two installments of €2,700.</p>
+          </div>
+          <div class="border border-sand-200 p-6">
+            <p class="text-xs uppercase tracking-wider font-semibold text-turtle-700">Optional support</p>
+            <p class="mt-3 font-serif text-3xl text-turtle-950">€280<span class="text-base">/month</span></p>
+            <p class="mt-2 text-sm leading-relaxed text-sand-700">Asynchronous support on Tuesday and Thursday.</p>
+          </div>
+          <div class="border border-sand-200 p-6">
+            <p class="text-xs uppercase tracking-wider font-semibold text-turtle-700">Additional time</p>
+            <p class="mt-3 font-serif text-3xl text-turtle-950">€450<span class="text-base">/hour</span></p>
+            <p class="mt-2 text-sm leading-relaxed text-sand-700">Additional individual sessions when needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-sand-200 bg-sand-50 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 md:grid-cols-12 md:items-center">
+      <div class="md:col-span-8">
+        <p class="text-xs uppercase tracking-[0.18em] font-semibold text-turtle-700">Also available</p>
+        <h2 class="mt-2 font-serif text-3xl text-turtle-950">Data & AI Advisory</h2>
+        <p class="mt-4 max-w-2xl text-sm leading-relaxed text-sand-700">For organisations working through data, AI, and adoption questions, Turtle Transformation also offers a separate advisory practice led by Miriam and Dr. Markus Schmidberger.</p>
+      </div>
+      <div class="md:col-span-4 md:text-right"><a href={getRelativePath('/data-ai-consulting')} class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-turtle-800 px-6 py-3 text-sm font-semibold text-turtle-900 hover:bg-white">Explore Data & AI Advisory</a></div>
+    </div>
+  </section>
+
+  <Faq items={faqItems} intro="Program details and contact information." />
+
+  <section class="bg-turtle-950 py-16 sm:py-24 text-sand-100">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-serif text-3xl sm:text-4xl font-normal text-white mb-4 tracking-tight">
-        Ready to Lead from Grounded Presence?
-      </h2>
-      <p class="text-sand-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
-        Spaces for the 12-Month Executive Coaching Partnership are limited to ensure intensive, high-touch support for each leader.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a 
-          href="mailto:info@turtletrafo.com?subject=12-Month%20Coaching%20Discovery%20Call%20Request" 
-          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-wider text-turtle-950 bg-sand-200 hover:bg-white active:bg-sand-300 shadow-md transition-all min-h-[50px]"
-        >
-          Book Discovery Call via info@turtletrafo.com
-        </a>
-        <a 
-          href={getRelativePath('/about')} 
-          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-wider text-sand-200 bg-turtle-900 hover:bg-turtle-800 border border-turtle-800 transition-all min-h-[50px]"
-        >
-          Read Our 20-Year Story
-        </a>
-      </div>
-
-      <p class="text-xs text-turtle-400 mt-8">
-        Direct confidential email: <a href="mailto:info@turtletrafo.com" class="underline underline-offset-4 hover:text-white">info@turtletrafo.com</a> • WhatsApp / Phone: +353 87 227 5723
-      </p>
+      <p class="text-xs uppercase tracking-[0.18em] font-semibold text-turtle-300">Executive coaching</p>
+      <h2 class="mt-3 font-serif text-3xl sm:text-4xl text-white">Start with a confidential conversation.</h2>
+      <p class="mt-5 text-sm sm:text-base leading-relaxed text-sand-300">Share a little about the leadership situation you want to work on. Email is the first step, and you will receive a response within 48 hours.</p>
+      <a href="mailto:info@turtletrafo.com?subject=Request%20a%20confidential%20conversation" class="mt-8 inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center rounded-full bg-sand-200 px-6 py-3 text-sm font-semibold text-turtle-950 hover:bg-white">Request a confidential conversation</a>
+      <p class="mt-5 text-sm text-turtle-300"><a href="mailto:info@turtletrafo.com" class="underline underline-offset-4">info@turtletrafo.com</a> · Response within 48 hours</p>
     </div>
   </section>
-
 </Layout>
-

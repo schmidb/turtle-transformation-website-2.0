@@ -62,7 +62,7 @@ The name and totem animal **Turtle** embodies foundational principles:
   Glenbeigh, Co. Kerry, Ireland  
   Eircode: V93 F6X0
 * **VAT Identification Number:** IE 4123186QH
-* **Official Contact Email:** `info@turtletrafo.de` / `info@turtletrafo.com`
+* **Official Contact Email (current):** `info@turtletrafo.com`
 * **Phone / WhatsApp:** `+353 87 227 5723`
 * **Content Responsibility:** Miriam & Markus Schmidberger
 * **Photography Credits:** Michelle Houlihan ([@photographybymichellehoulihan](https://www.instagram.com/photographybymichellehoulihan/)), Pixabay
@@ -161,10 +161,12 @@ The existing website consists of **20+ distinct pages and funnels**, plus extern
   1. *Authentic Leadership Coaching:* General/experienced leaders, founders, and executives.
   2. *Authentic Leadership Coaching for Newbies:* First-time managers establishing authentic style and communication.
   3. *Get your Sh\*t Done in 4 Work-Days:* 6-week intensive sprint to cut work time by 10–20% while preserving/increasing business output; includes fear management training.
-* **Advanced 12-Month Executive Coaching (from internal docs):**
-  * Independent Leader Rate (self-funded): **€4,700 base** (payable in two €2,350 installments) + **€280/month** optional WhatsApp support retainer.
-  * Corporate Sponsor Rate (enterprise HR/executive budget): **€8,500 – €12,000**.
-  * Structure: 1 monthly 60-min thematic coaching session + 1 monthly 30-min practical training session + baseline assessments (*Adaptability Assessment* and *Five-Mountain Kokoro Assessment*).
+* **Current 12-Month Executive Coaching:**
+  * Core program: **€5,400**, payable in two **€2,700** installments.
+  * Optional asynchronous Tuesday and Thursday support: **€280/month**.
+  * Additional individual sessions: **€450/hour**.
+  * Structure: one monthly 60-minute coaching session, one monthly 30-minute practical application and training session, and baseline assessments (*AQai Adaptability Assessment* and *Five-Mountain Leadership Assessment*).
+  * Contact: `info@turtletrafo.com`; a response is promised within 48 hours.
 
 ### B. Corporate B2B: TT Authentic Leader & Team Program
 * **Target Audience:** Engineering, data, and business departments, scale-ups, and corporate leadership teams.

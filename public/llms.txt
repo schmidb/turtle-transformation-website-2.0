@@ -1,61 +1,38 @@
 # Turtle Transformation Limited (The Authentic Leader Academy)
 
-> The Authentic Leader Academy by Turtle Transformation Limited empowers senior directors, C-suite executives, and technology founders to transition from reactive operational firefighting to grounded, calm, and high-leverage leadership.
+Turtle Transformation Limited is an Irish executive coaching and advisory practice. The site is presented in English.
 
 ## Key Pages
-- [12-Month Executive Coaching](https://turtletrafo.com/): Program, curriculum, pricing (€4,700), FAQ.
-- [Enterprise Data & AI Advisory](https://turtletrafo.com/data-ai-consulting/): Advisory practice for enterprises and scale-ups.
-- [Our 20-Year Journey](https://turtletrafo.com/about/): Founders Miriam and Dr. Markus Schmidberger, principles and story.
+- [12-Month Executive Coaching](https://turtletrafo.com/): The primary offer, program details, pricing, and FAQ.
+- [Data & AI Advisory](https://turtletrafo.com/data-ai-consulting/): A secondary advisory offer for organisations.
+- [Our Journey](https://turtletrafo.com/about/): Founders Miriam and Dr. Markus Schmidberger.
 - [Privacy Policy](https://turtletrafo.com/privacy/)
 - [Imprint & Legal Notice](https://turtletrafo.com/imprint/)
 
-## Quick Facts
-- Who: Turtle Transformation Limited, an Irish company based in Glenbeigh, Co. Kerry; works with clients worldwide (English and German).
-- What: 12-month executive coaching for senior leaders and founders, plus Data & AI advisory for organisations.
-- Price: €4,700 for the 12-month coaching program (two installments of €2,350); optional €280/month WhatsApp retainer.
-- Format: Video sessions worldwide; optional in-person immersion days in County Kerry, Ireland.
-- Contact: info@turtletrafo.com | +353 87 227 5723
+## 12-Month Executive Coaching
+- **Audience:** Senior leaders and founders.
+- **Duration:** 12 months.
+- **Cadence:** One 60-minute coaching session and one 30-minute practical application and training session per month.
+- **Baseline assessments:** AQai Adaptability Assessment and Five-Mountain Leadership Assessment.
+- **Core price:** €5,400, payable in two installments of €2,700.
+- **Optional asynchronous support:** €280 per month, available Tuesday and Thursday.
+- **Additional individual sessions:** €450 per hour.
+- **Contact:** Request a confidential conversation by email at info@turtletrafo.com. A response is promised within 48 hours.
 
-## Core Philosophy
-- "Slow is smooth, and smooth is fast."
-- "Change from the inside to the outside."
-- Core belief: Real executive performance does not come from superficial productivity tools, but from somatic emotional regulation, nervous system resilience, and authentic human connection.
-
-## Founders
-- **Miriam Schmidberger**: Co-founder, Industry AI Advisor for Munster Technological University (MTU) Kerry, Change Angel & Performance Coach, AQai Certified Adaptability Coach, Unbeatable Mind & Heroic Certified Coach, Master Yoga Alliance Teacher, Keynote Speaker at Greator Festival 2024. Specializes in organizational AI adoption, human adaptability, emotional digestion, and executive transformation.
-- **Dr. Markus Schmidberger**: Co-founder, PhD in Technical Mathematics & Bioinformatics, former Director of Data at Scout24 Group, former Senior Big Data Consultant at Amazon Web Services (AWS) ProServe, CTO, Life Trust Coach. Specializes in enterprise Data & AI strategy, distributed cloud architecture, scaling high-performance engineering teams, and executive advisory.
-
-## Core Offerings
-
-### 1. 12-Month High Performance Executive Coaching (with Miriam Schmidberger)
-- **Target Audience**: Senior directors, VPs, C-suite executives, tech leaders, and ambitious founders.
-- **Duration**: 12 Months.
-- **Cadence**: 1x 60-min strategic deep-dive session + 1x 30-min operational application session per month.
-- **Baseline Diagnostic Assessments**: AQai Adaptability Assessment and Five-Mountain Leadership Assessment (Physical, Mental, Emotional, Intuition, Kokoro).
-- **Core Pillars**: Cognitive Restructuring, Somatic Stress Regulation & Parts Work, High-Impact Dialogue (NVC), Team Psychological Safety.
-- **Pricing**: €4,700 total (payable in two milestones of €2,350 with a formal 6-month progress audit).
-- **Optional Retainer**: €280/month for dedicated asynchronous WhatsApp voice/text support (Mon–Thu) for real-time crisis resolution.
-- **Application & Contact**: Direct email to info@turtletrafo.com
-
-### 2. Enterprise Data & AI Advisory (with Miriam & Dr. Markus Schmidberger)
-- **Advisory Practice**: Led jointly by Miriam Schmidberger (Industry AI Advisor for Munster Technological University MTU Kerry) and Dr. Markus Schmidberger (PhD Bioinformatics, former Director of Data at Scout24, AWS ProServe Senior Consultant).
-- **Target Audience**: Enterprises, scale-ups, and technology leadership teams seeking executive guidance on generative AI, distributed data architecture, workforce adaptability, and scaling engineering cultures.
-- **Core Pillars**: Enterprise Data & AI Strategy Roadmaps, Human-AI Adoption & Culture (led by Miriam), High-Performance Tech Team Scaling & Board Advisory (led by Dr. Markus).
-- **Inquiries**: Direct email to info@turtletrafo.com
+## Data & AI Advisory
+A separate advisory practice for enterprise data, AI, and adoption questions, led by Miriam Schmidberger and Dr. Markus Schmidberger.
 
 ## Frequently Asked Questions
-- **How much does the 12-month executive coaching cost?** €4,700 in total, payable in two installments of €2,350 with a formal 6-month progress audit. An optional retainer adds Mon–Thu WhatsApp support for €280/month. VAT invoices are issued by Turtle Transformation Limited (Ireland).
-- **Who is it for?** Senior directors, VPs, C-suite executives, technology leaders and ambitious founders.
-- **How much time does it take?** One 60-minute strategic session and one 30-minute practical session per month.
-- **Can an employer pay for it?** Yes. Many clients use executive development or leadership training budgets.
-- **Is it online or in person?** Mostly private video sessions worldwide; in-person VIP immersion days in County Kerry, Ireland are available.
-- **What is the first step?** A confidential 30-minute discovery call, requested by email at info@turtletrafo.com.
+- **What does the coaching program cost?** €5,400, payable in two installments of €2,700.
+- **What is included?** Two baseline assessments, a 60-minute coaching session each month, and a 30-minute practical application and training session each month.
+- **Is support available between sessions?** Optional asynchronous Tuesday and Thursday support costs €280 per month.
+- **Can I book additional time?** Additional individual sessions cost €450 per hour.
+- **How do I make contact?** Email info@turtletrafo.com to request a confidential conversation. A response is promised within 48 hours.
 
 ## Company & Legal Details
-- **Entity**: Turtle Transformation Limited
-- **Registered Address**: Drom Upper, Glenbeigh, Co. Kerry, V93 F6X0, Ireland
-- **VAT Number**: IE 4123186QH
-- **Contact Email**: info@turtletrafo.com
-- **Phone**: +353 87 227 5723
-- **Official Website**: https://turtletrafo.com
-
+- **Entity:** Turtle Transformation Limited
+- **Registered address:** Drom Upper, Glenbeigh, Co. Kerry, V93 F6X0, Ireland
+- **VAT number:** IE 4123186QH
+- **Email:** info@turtletrafo.com
+- **Phone:** +353 87 227 5723
+- **Website:** https://turtletrafo.com
