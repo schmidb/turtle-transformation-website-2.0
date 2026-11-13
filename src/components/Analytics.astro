@@ -1,0 +1,130 @@
+---
+// src/components/Analytics.astro
+// Google Analytics 4 behind a consent banner (GDPR / ePrivacy).
+// - No request to Google is made until the visitor clicks "Accept".
+// - Consent Mode v2 defaults are set to "denied".
+// - Choice is stored in localStorage; footer link "Cookie settings" re-opens the banner.
+// - Only active in production builds, and only sends data on the production hostname.
+import { GA_MEASUREMENT_ID } from '../utils/schema';
+import { getRelativePath } from '../utils/paths';
+
+const enabled = import.meta.env.PROD;
+const privacyHref = getRelativePath('/privacy');
+---
+
+{enabled && (
+  <>
+    <div
+      id="cookie-banner"
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="cookie-banner-title"
+      aria-describedby="cookie-banner-text"
+      class="hidden fixed inset-x-0 bottom-0 z-50 p-4 sm:p-6"
+    >
+      <div class="max-w-3xl mx-auto bg-white border border-sand-300 rounded-2xl shadow-lg p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-4">
+        <div class="flex-1">
+          <p id="cookie-banner-title" class="font-semibold text-turtle-950 text-sm mb-1">Analytics cookies</p>
+          <p id="cookie-banner-text" class="text-xs text-sand-700 leading-relaxed">
+            We use Google Analytics to understand how this website is used. It sets cookies and sends data to Google only if you accept.
+            Details in our <a href={privacyHref} class="underline underline-offset-2 text-turtle-800">Privacy Policy</a>.
+          </p>
+        </div>
+        <div class="flex gap-3 shrink-0">
+          <button
+            type="button"
+            id="cookie-decline"
+            class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-turtle-900 bg-sand-200 hover:bg-sand-300 transition-colors min-h-[44px]"
+          >
+            Decline
+          </button>
+          <button
+            type="button"
+            id="cookie-accept"
+            class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-turtle-900 bg-sand-200 hover:bg-sand-300 transition-colors min-h-[44px]"
+          >
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline define:vars={{ GA_ID: GA_MEASUREMENT_ID }}>
+      (function () {
+        var KEY = 'tt-analytics-consent';
+        var PROD_HOSTS = ['turtletrafo.com', 'www.turtletrafo.com'];
+        var banner = document.getElementById('cookie-banner');
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag('consent', 'default', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'denied',
+        });
+
+        function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+        function write(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+        var loaded = false;
+        function loadGA() {
+          if (loaded || PROD_HOSTS.indexOf(location.hostname) === -1) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+          document.head.appendChild(s);
+          gtag('js', new Date());
+          gtag('config', GA_ID);
+        }
+
+        function clearGACookies() {
+          document.cookie.split(';').forEach(function (c) {
+            var name = c.split('=')[0].trim();
+            if (name === '_ga' || name.indexOf('_ga_') === 0) {
+              var host = location.hostname.replace(/^www\./, '');
+              [location.hostname, '.' + host].forEach(function (d) {
+                document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
+              });
+            }
+          });
+        }
+
+        function accept() {
+          write('granted');
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+          loadGA();
+          banner.classList.add('hidden');
+        }
+        function decline() {
+          var wasGranted = read() === 'granted';
+          write('denied');
+          gtag('consent', 'update', { analytics_storage: 'denied' });
+          clearGACookies();
+          banner.classList.add('hidden');
+          if (wasGranted) location.reload();
+        }
+
+        document.getElementById('cookie-accept').addEventListener('click', accept);
+        document.getElementById('cookie-decline').addEventListener('click', decline);
+        document.querySelectorAll('[data-cookie-settings]').forEach(function (el) {
+          el.addEventListener('click', function () {
+            banner.classList.remove('hidden');
+            document.getElementById('cookie-accept').focus();
+          });
+        });
+
+        var stored = read();
+        if (stored === 'granted') {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+          loadGA();
+        } else if (stored !== 'denied') {
+          banner.classList.remove('hidden');
+        }
+      })();
+    </script>
+  </>
+)}

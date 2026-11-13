@@ -1,44 +1,54 @@
 ---
 // src/pages/data-ai-consulting.astro
 import Layout from '../layouts/Layout.astro';
+import Faq from '../components/Faq.astro';
 import { getRelativePath } from '../utils/paths';
+import { faqPageSchema, ORG_ID, MIRIAM_ID, MARKUS_ID, SITE_URL } from '../utils/schema';
+import type { FaqItem } from '../utils/schema';
 
 const dataAiSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Enterprise Data & AI Advisory',
-  provider: [
-    {
-      '@type': 'Person',
-      name: 'Miriam Schmidberger',
-      jobTitle: 'Industry AI Advisor / Co-Founder',
-      affiliation: 'Munster Technological University (MTU) Kerry',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'Turtle Transformation Limited',
-      },
-    },
-    {
-      '@type': 'Person',
-      name: 'Dr. Markus Schmidberger',
-      jobTitle: 'Enterprise Data & AI Strategist / Co-Founder',
-      alumniOf: 'Technical University of Munich',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'Turtle Transformation Limited',
-      },
-    },
-  ],
+  '@id': `${SITE_URL}/data-ai-consulting/#service`,
+  url: `${SITE_URL}/data-ai-consulting/`,
+  provider: [{ '@id': ORG_ID }, { '@id': MIRIAM_ID }, { '@id': MARKUS_ID }],
   description: 'Executive Data & AI advisory for enterprises and scale-ups led jointly by Miriam Schmidberger (Industry AI Advisor for MTU Kerry) and Dr. Markus Schmidberger (former Director of Data at Scout24, AWS Senior Consultant). Bridging deep technical architecture with human adaptability and organizational AI adoption.',
   serviceType: 'Data & AI Advisory & Consulting',
   areaServed: 'Worldwide',
 };
+
+const faqItems: FaqItem[] = [
+  {
+    question: 'Who is the Enterprise Data & AI Advisory for?',
+    answer: 'Enterprises, scale-ups and technology leadership teams seeking executive guidance on generative AI, distributed data architecture, workforce adaptability and scaling engineering cultures.',
+  },
+  {
+    question: 'Who leads the advisory?',
+    answer: 'The practice is led jointly by Miriam Schmidberger, Industry AI Advisor for Munster Technological University (MTU) Kerry, and Dr. Markus Schmidberger, who holds a PhD in Bioinformatics, was Director of Data at Scout24 Group and a Senior Consultant at AWS ProServe.',
+  },
+  {
+    question: 'Why do enterprise AI initiatives fail?',
+    answer: 'We see a dual disconnect: technical pitfalls such as architectural complexity and vendor lock-in, and cultural pitfalls such as workforce resistance and fear of change. The advisory addresses both the technical architecture and the human adoption side.',
+  },
+  {
+    question: 'What does the advisory cover?',
+    answer: 'Enterprise Data & AI strategy roadmaps, human-AI adoption and culture (led by Miriam), and high-performance tech team scaling and board advisory (led by Dr. Markus).',
+  },
+  {
+    question: 'How do I start an advisory conversation?',
+    answer: 'Email info@turtletrafo.com with a short description of your organisation and the challenge. Inquiries are handled confidentially.',
+  },
+];
+
+const faqSchema = faqPageSchema(faqItems);
 ---
 
 <Layout
-  title="Enterprise Data & AI Advisory | Miriam & Dr. Markus Schmidberger | Turtle Transformation"
-  description="Strategic Data & AI leadership advisory by Miriam Schmidberger (Industry AI Advisor for MTU Kerry) and Dr. Markus Schmidberger (ex-Scout24 Director, AWS). Bridging technical systems with human AI adoption."
-  jsonLd={dataAiSchema}
+  title="Enterprise Data & AI Advisory | Turtle Transformation"
+  breadcrumb="Data & AI Advisory"
+  description="Executive Data & AI advisory for enterprises and scale-ups, led by Miriam Schmidberger (MTU Kerry) and Dr. Markus Schmidberger (ex-Scout24, AWS)."
+  jsonLd={[dataAiSchema, faqSchema]}
 >
 
   <!-- Hero Section -->
@@ -65,13 +75,13 @@ const dataAiSchema = {
       <!-- Primary Action CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10">
         <a 
-          href="mailto:info@turtletrafo.de?subject=Enterprise%20Data%20%26%20AI%20Advisory%20Inquiry" 
+          href="mailto:info@turtletrafo.com?subject=Enterprise%20Data%20%26%20AI%20Advisory%20Inquiry" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-wider font-semibold text-turtle-950 bg-sand-200 hover:bg-white active:bg-sand-300 shadow-md transition-all min-h-[50px]"
         >
           <svg class="w-4 h-4 text-turtle-900" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <span>Email Inquiry: info@turtletrafo.de</span>
+          <span>Email Inquiry: info@turtletrafo.com</span>
         </a>
         <a 
           href={getRelativePath('/about')} 
@@ -83,7 +93,7 @@ const dataAiSchema = {
 
       <!-- Clean Status Notice -->
       <p class="text-xs text-sand-400">
-        Direct confidential advisory inquiries: <a href="mailto:info@turtletrafo.de" class="text-turtle-300 underline underline-offset-4 font-medium">info@turtletrafo.de</a>
+        Direct confidential advisory inquiries: <a href="mailto:info@turtletrafo.com" class="text-turtle-300 underline underline-offset-4 font-medium">info@turtletrafo.com</a>
       </p>
 
     </div>
@@ -384,6 +394,8 @@ const dataAiSchema = {
     </div>
   </section>
 
+  <Faq items={faqItems} intro="Answers to common questions about our Data & AI advisory." />
+
   <!-- Contact / Booking CTA -->
   <section class="py-24 sm:py-28 bg-turtle-950 text-sand-100">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -396,13 +408,13 @@ const dataAiSchema = {
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a 
-          href="mailto:info@turtletrafo.de?subject=Strategic%20Data%20%26%20AI%20Advisory%20Inquiry" 
+          href="mailto:info@turtletrafo.com?subject=Strategic%20Data%20%26%20AI%20Advisory%20Inquiry" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-wider font-semibold text-turtle-950 bg-sand-200 hover:bg-white active:bg-sand-300 shadow-md transition-all min-h-[50px]"
         >
           <svg class="w-4 h-4 text-turtle-900" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <span>Email Inquiry to info@turtletrafo.de</span>
+          <span>Email Inquiry to info@turtletrafo.com</span>
         </a>
         <a 
           href={getRelativePath('/')} 
@@ -413,7 +425,7 @@ const dataAiSchema = {
       </div>
 
       <p class="text-xs text-turtle-400 mt-8">
-        Direct executive email: <a href="mailto:info@turtletrafo.de" class="underline underline-offset-4 hover:text-white">info@turtletrafo.de</a> • Response within 24 business hours
+        Direct executive email: <a href="mailto:info@turtletrafo.com" class="underline underline-offset-4 hover:text-white">info@turtletrafo.com</a> • Response within 24 business hours
       </p>
     </div>
   </section>

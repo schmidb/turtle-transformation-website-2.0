@@ -3,63 +3,96 @@
 import TopBanner from '../components/TopBanner.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
 import { getRelativePath } from '../utils/paths';
+import {
+  SITE_URL,
+  SITE_NAME,
+  WEBSITE_ID,
+  ORG_ID,
+  organizationSchema,
+  websiteSchema,
+  personSchemas,
+  breadcrumbSchema,
+} from '../utils/schema';
+// Self-hosted fonts (no requests to Google Fonts, GDPR-friendly and faster).
+import '@fontsource-variable/plus-jakarta-sans/wght.css';
+import '@fontsource-variable/source-serif-4/wght.css';
+import '@fontsource-variable/source-serif-4/wght-italic.css';
 import '../styles/global.css';
 
 interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
+  /** Name of the current page for the breadcrumb trail (omit on the home page). */
+  breadcrumb?: string;
+  /** Page type for WebPage schema. */
+  pageType?: 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage';
+  noindex?: boolean;
+  /** Extra properties merged into the page's WebPage node (e.g. mainEntity). */
+  webPageExtras?: Record<string, any>;
 }
 
 const {
   title = 'Turtle Transformation | 12-Month High Performance Leadership Coaching',
   description = 'Empowering senior executives, founders, and engineering leaders to shift from reactive firefighting to calm, intentional, high-leverage effectiveness.',
-  ogImage = '/og-image.jpg',
+  ogImage = '/og-image.png',
+  ogImageAlt = 'Turtle Transformation: executive coaching and Data & AI advisory',
   jsonLd,
+  breadcrumb,
+  pageType = 'WebPage',
+  noindex = false,
+  webPageExtras = {},
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://schmidb.github.io');
+// Canonical URLs always point at the production domain, regardless of where the build is hosted
+// (preview on github.io, local dev, ...). The base path is stripped and a trailing slash enforced,
+// matching what GitHub Pages serves for directory-style pages.
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+let pagePath = Astro.url.pathname;
+if (base && pagePath.startsWith(base)) pagePath = pagePath.slice(base.length);
+if (!pagePath.startsWith('/')) pagePath = `/${pagePath}`;
+if (!pagePath.endsWith('/') && !/\.[a-z0-9]+$/i.test(pagePath)) pagePath += '/';
+const canonicalURL = new URL(pagePath, SITE_URL);
+const ogImageURL = new URL(ogImage, SITE_URL);
 
-// Default Organization JSON-LD Schema for AI agents & Search Engines
-const defaultOrgSchema = {
+const webPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Turtle Transformation Limited',
-  alternateName: 'The Authentic Leader Academy',
-  url: 'https://turtletrafo.com',
-  logo: 'https://turtletrafo.com/favicon.svg',
-  email: 'info@turtletrafo.de',
-  telephone: '+353872275723',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Drom Upper',
-    addressLocality: 'Glenbeigh',
-    addressRegion: 'Co. Kerry',
-    postalCode: 'V93 F6X0',
-    addressCountry: 'IE',
-  },
-  founders: [
-    {
-      '@type': 'Person',
-      name: 'Miriam Schmidberger',
-      jobTitle: 'Change Angel & Executive Performance Coach',
-      knowsAbout: ['Leadership Development', 'Adaptability AQ', 'Emotional Regulation', 'Somatic Coaching'],
-    },
-    {
-      '@type': 'Person',
-      name: 'Dr. Markus Schmidberger',
-      jobTitle: 'Enterprise Data & AI Consultant / Co-Founder',
-      alumniOf: 'Technical University of Munich',
-      knowsAbout: ['Enterprise AI Strategy', 'Data Engineering', 'Agile Team Scaling', 'Scrum'],
-    },
-  ],
+  '@type': pageType,
+  '@id': `${canonicalURL.href}#webpage`,
+  url: canonicalURL.href,
+  name: title,
+  description,
+  inLanguage: 'en',
+  isPartOf: { '@id': WEBSITE_ID },
+  about: { '@id': ORG_ID },
+  primaryImageOfPage: { '@type': 'ImageObject', url: ogImageURL.href },
+  ...webPageExtras,
 };
 
-const schemas = jsonLd 
-  ? (Array.isArray(jsonLd) ? [defaultOrgSchema, ...jsonLd] : [defaultOrgSchema, jsonLd])
-  : [defaultOrgSchema];
+const trail = breadcrumb
+  ? [
+      { name: 'Home', path: '/' },
+      { name: breadcrumb, path: pagePath },
+    ]
+  : null;
+
+const pageSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const schemas = [
+  organizationSchema(),
+  websiteSchema(),
+  ...personSchemas(),
+  webPageSchema,
+  ...(trail ? [breadcrumbSchema(trail)] : []),
+  ...pageSchemas,
+];
+
+const robots = noindex
+  ? 'noindex, follow'
+  : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 ---
 
 <!doctype html>
@@ -67,18 +100,19 @@ const schemas = jsonLd
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0C1F1B" />
     <link rel="icon" type="image/svg+xml" href={getRelativePath('/favicon.svg')} />
     <link rel="icon" type="image/png" sizes="32x32" href={getRelativePath('/favicon-32x32.png')} />
     <link rel="apple-touch-icon" href={getRelativePath('/favicon.png')} />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="sitemap" href={getRelativePath('/sitemap.xml')} />
+    <link rel="sitemap" type="application/xml" href={getRelativePath('/sitemap-index.xml')} />
     <link rel="alternate" type="text/plain" href={getRelativePath('/llms.txt')} title="LLM and AI Agent Summary" />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robots} />
     <meta name="author" content="Turtle Transformation Limited" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
@@ -86,32 +120,29 @@ const schemas = jsonLd
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, canonicalURL)} />
-    <meta property="og:site_name" content="Turtle Transformation" />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(ogImage, canonicalURL)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
-    <!-- Structured Data JSON-LD for AI Agents & Search Engines -->
+    <!-- Structured Data JSON-LD for search engines and AI answer engines -->
     {schemas.map((schema) => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
 
-    <!-- Performance & Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
     <style>
       body {
-        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      }
-      .font-serif {
-        font-family: 'Source Serif 4', Georgia, serif;
+        font-family: 'Plus Jakarta Sans Variable', system-ui, -apple-system, sans-serif;
       }
     </style>
   </head>
@@ -124,5 +155,6 @@ const schemas = jsonLd
     </main>
 
     <Footer />
+    <Analytics />
   </body>
 </html>

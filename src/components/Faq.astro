@@ -1,0 +1,40 @@
+---
+// src/components/Faq.astro
+// Visible FAQ list. Pair with faqPageSchema(items) so markup and structured data always match.
+import type { FaqItem } from '../utils/schema';
+
+interface Props {
+  items: FaqItem[];
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  id?: string;
+}
+
+const {
+  items,
+  eyebrow = 'Common Inquiries',
+  heading = 'Frequently Asked Questions',
+  intro,
+  id = 'faq',
+} = Astro.props;
+---
+
+<section id={id} class="py-24 bg-sand-50 border-t border-sand-200/60">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-xs uppercase font-semibold tracking-widest text-turtle-700">{eyebrow}</span>
+      <h2 class="font-serif text-3xl font-normal text-turtle-950 mt-1 mb-2 tracking-tight">{heading}</h2>
+      {intro && <p class="text-xs text-sand-600">{intro}</p>}
+    </div>
+
+    <div class="space-y-4">
+      {items.map((item) => (
+        <div class="p-6 rounded-xl bg-white border border-sand-200/80 shadow-sm">
+          <h3 class="font-serif text-base font-semibold text-turtle-950 mb-2">{item.question}</h3>
+          <p class="text-xs sm:text-sm text-sand-700 leading-relaxed">{item.answer}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

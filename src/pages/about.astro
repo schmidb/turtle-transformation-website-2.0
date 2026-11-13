@@ -2,34 +2,20 @@
 // src/pages/about.astro
 import Layout from '../layouts/Layout.astro';
 import { getRelativePath } from '../utils/paths';
+import { MIRIAM_ID, MARKUS_ID, ORG_ID } from '../utils/schema';
 
-const aboutPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'AboutPage',
-  name: 'Our 20-Year Journey | Miriam & Dr. Markus Schmidberger',
-  description: 'The story behind Turtle Transformation: How Miriam and Dr. Markus Schmidberger united deep somatic transformation with high-stakes executive data leadership.',
-  mainEntity: [
-    {
-      '@type': 'Person',
-      name: 'Miriam Schmidberger',
-      jobTitle: 'Co-Founder, Executive Performance Coach & Industry AI Advisor',
-      affiliation: 'Munster Technological University (MTU) Kerry',
-      description: 'Industry AI Advisor for Munster Technological University (MTU) Kerry, Certified AQai Adaptability Coach, Unbeatable Mind & Heroic Certified Coach, Yoga Alliance Master Teacher, and Greator Festival 2024 Keynote Speaker.',
-    },
-    {
-      '@type': 'Person',
-      name: 'Dr. Markus Schmidberger',
-      jobTitle: 'Co-Founder & Enterprise Data/AI Strategist',
-      description: 'PhD in Bioinformatics/Mathematics, former Director of Data at Scout24 Group, AWS ProServe Senior Consultant, and certified Life Trust Coach.',
-    },
-  ],
+const webPageExtras = {
+  about: { '@id': ORG_ID },
+  mainEntity: [{ '@id': MIRIAM_ID }, { '@id': MARKUS_ID }],
 };
 ---
 
 <Layout
-  title="Our 20-Year Journey | Miriam & Dr. Markus Schmidberger | Turtle Transformation"
-  description="Discover the 20-year story of Turtle Transformation: uniting executive data leadership and agile scaling with somatic emotional regulation and deep personal growth."
-  jsonLd={aboutPageSchema}
+  title="Our 20-Year Journey | Miriam & Dr. Markus Schmidberger"
+  breadcrumb="Our Journey"
+  pageType="AboutPage"
+  description="The 20-year story of Turtle Transformation: how Miriam and Dr. Markus Schmidberger unite executive data leadership with somatic emotional regulation."
+  webPageExtras={webPageExtras}
 >
 
   <!-- Hero Section -->
@@ -346,13 +332,13 @@ const aboutPageSchema = {
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a 
-          href="mailto:info@turtletrafo.de?subject=General%20Inquiry%20-%20Turtle%20Transformation" 
+          href="mailto:info@turtletrafo.com?subject=General%20Inquiry%20-%20Turtle%20Transformation" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-wider font-semibold text-turtle-950 bg-sand-200 hover:bg-white active:bg-sand-300 shadow-md transition-all min-h-[50px]"
         >
           <svg class="w-4 h-4 text-turtle-900" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <span>Email Us: info@turtletrafo.de</span>
+          <span>Email Us: info@turtletrafo.com</span>
         </a>
       </div>
 
