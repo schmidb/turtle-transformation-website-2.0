@@ -21,7 +21,8 @@
 - Show the email once per CTA area. Do not repeat the address directly below a button that already shows it.
 
 ## Testimonials and proof
-- Use only approved testimonials: Alexandra, Anna, Thorsten (also written Torsten Niedermeyer in source material) and the Ali and Thorsten YouTube videos.
+- Use only approved testimonials: Alexandra (called "Ali" in her YouTube video title), Anna, and Thorsten Niedermeyer (spelled "Torsten" in some source documents). Their two YouTube videos are the approved video testimonials. Use one consistent display name per person: "Alexandra", "Anna", "Thorsten Niedermeyer".
+- Never show scores or star ratings next to testimonials. Internal 1-5 review scores are not client ratings.
 - Never invent surnames, job titles, employers, metrics or quotes. Do not use health or diagnostic details.
 - Never use the Rachel O'Sullivan recording or any unapproved or workshop-level testimonial as proof for the 12-month programme.
 - Ask the owner before adding any new testimonial.
