@@ -50,8 +50,6 @@ export function organizationSchema() {
     description:
       'Executive coaching and Data & AI advisory for senior leaders, founders and engineering organisations. Based in County Kerry, Ireland; working worldwide.',
     email: 'info@turtletrafo.com',
-    telephone: '+353872275723',
-    vatID: 'IE4123186QH',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Drom Upper',
@@ -66,7 +64,6 @@ export function organizationSchema() {
       '@type': 'ContactPoint',
       contactType: 'customer service',
       email: 'info@turtletrafo.com',
-      telephone: '+353872275723',
       availableLanguage: ['English', 'German'],
     },
     founder: [{ '@id': MIRIAM_ID }, { '@id': MARKUS_ID }],

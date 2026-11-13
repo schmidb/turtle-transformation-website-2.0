@@ -32,7 +32,5 @@ A separate advisory practice for enterprise data, AI, and adoption questions, le
 ## Company & Legal Details
 - **Entity:** Turtle Transformation Limited
 - **Registered address:** Drom Upper, Glenbeigh, Co. Kerry, V93 F6X0, Ireland
-- **VAT number:** IE 4123186QH
 - **Email:** info@turtletrafo.com
-- **Phone:** +353 87 227 5723
 - **Website:** https://turtletrafo.com
