@@ -1,47 +1,74 @@
 ---
+// Click-to-load video testimonial.
+// The preview image is hosted locally, so nothing contacts YouTube/Google on page load.
+// The privacy-enhanced player (youtube-nocookie.com) loads only after the visitor clicks the preview.
+import { getRelativePath } from '../utils/paths';
+
 interface Props {
   name: string;
   videoId: string;
+  /** Local thumbnail base name in /public/images, without extension (expects .webp and .jpg). */
+  thumb: string;
 }
 
-const { name, videoId } = Astro.props;
+const { name, videoId, thumb } = Astro.props;
 ---
 
-<div class="video-testimonial border-t-2 border-turtle-800 bg-sand-50 p-6" data-youtube-testimonial data-video-id={videoId} data-name={name}>
-  <div class="flex aspect-video items-center justify-center border border-sand-200 bg-turtle-950 p-6 text-center">
-    <div>
-      <p class="text-sm font-semibold text-white">{name}</p>
-      <p class="mt-1 text-xs text-turtle-200">Video testimonial</p>
-    </div>
+<figure class="video-testimonial m-0" data-youtube-testimonial data-video-id={videoId} data-name={name}>
+  <div class="relative aspect-video overflow-hidden rounded-xl bg-turtle-950 shadow-sm" data-youtube-frame>
+    <button
+      type="button"
+      class="group absolute inset-0 block h-full w-full cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turtle-950"
+      data-youtube-play
+      aria-label={`Play ${name}'s video testimonial. The video loads from YouTube.`}
+    >
+      <picture>
+        <source srcset={getRelativePath(`/images/${thumb}.webp`)} type="image/webp" />
+        <img
+          src={getRelativePath(`/images/${thumb}.jpg`)}
+          alt=""
+          width="960"
+          height="540"
+          loading="lazy"
+          class="h-full w-full object-cover"
+        />
+      </picture>
+      <span class="absolute inset-0 bg-turtle-950/25 transition-colors group-hover:bg-turtle-950/10" aria-hidden="true"></span>
+      <span class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+        <span class="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-md transition-transform group-hover:scale-105">
+          <svg class="ml-1 h-7 w-7 text-turtle-900" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"></path>
+          </svg>
+        </span>
+      </span>
+    </button>
   </div>
-  <div class="mt-4">
+  <figcaption class="mt-3">
     <p class="text-sm font-semibold text-turtle-950">{name}</p>
-    <p class="mt-1 text-sm text-sand-700">Video testimonial</p>
-  </div>
-  <button type="button" class="mt-5 inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-turtle-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-turtle-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turtle-950" data-youtube-play aria-label={`Play ${name}'s video testimonial on YouTube`}>
-    Play testimonial on YouTube
-  </button>
-  <p class="mt-3 text-xs leading-relaxed text-sand-600">Playing this video creates a connection to YouTube and sends data to YouTube.</p>
-</div>
+    <p class="mt-0.5 text-xs text-sand-600">Video testimonial &middot; plays via YouTube</p>
+  </figcaption>
+</figure>
 
 <script>
-  document.querySelectorAll('[data-youtube-testimonial]').forEach((container) => {
+  document.querySelectorAll<HTMLElement>('[data-youtube-testimonial]').forEach((container) => {
     const button = container.querySelector('[data-youtube-play]');
+    const frame = container.querySelector<HTMLElement>('[data-youtube-frame]');
 
     button?.addEventListener('click', () => {
       const videoId = container.dataset.videoId;
       const name = container.dataset.name;
-      if (!videoId || !name) return;
+      if (!videoId || !name || !frame) return;
 
       const iframe = document.createElement('iframe');
-      iframe.className = 'aspect-video w-full border-0';
+      iframe.className = 'absolute inset-0 h-full w-full border-0';
       iframe.title = `${name} video testimonial`;
       iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allow =
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.allowFullscreen = true;
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
 
-      container.replaceChildren(iframe);
+      frame.replaceChildren(iframe);
       iframe.focus();
     });
   });
