@@ -105,13 +105,33 @@ const faqSchema = faqPageSchema(faqItems);
         <p class="max-w-md text-sm leading-relaxed text-sand-700">Short, client-approved reflections on the coaching experience.</p>
       </div>
       <div class="grid gap-6 md:grid-cols-2">
-        <YouTubeTestimonial name="Alexandra" videoId="Kcp4eAiiAhU" thumb="testimonial-ali" />
-        <YouTubeTestimonial name="Thorsten Niedermeyer" videoId="cu2TnvjpiFE" thumb="testimonial-thorsten" />
+        <YouTubeTestimonial
+          name="Alexandra"
+          videoId="Kcp4eAiiAhU"
+          thumb="testimonial-ali"
+          quotes={[
+            "What’s so beautiful about that program is that Miriam reacts to everybody - it’s not ‘follow this and you will succeed’, it’s ‘if this doesn’t work, try that’... very unique and very individual.",
+            "I feel like I can focus on what’s important in life now... through the work in the sessions and the techniques that Miriam gave us.",
+          ]}
+        />
+        <YouTubeTestimonial
+          name="Thorsten Niedermeyer"
+          videoId="cu2TnvjpiFE"
+          thumb="testimonial-thorsten"
+          quotes={[
+            "One of the biggest things was to really grab my why... what is my one thing mission at the moment, with the numbers behind it.",
+            "Miriam really helped me distil this one habit that made the difference, that I’m now integrating in so many places in my life.",
+            "She guided me through all this with loving kindness, attention, a room of safety and trust. It was easy to go deep.",
+          ]}
+        />
       </div>
-      <article class="mt-8 border-t-2 border-turtle-800 bg-sand-50 p-6 md:max-w-xl">
-        <p class="text-sm font-semibold text-turtle-950">Anna</p>
-        <p class="mt-3 text-sm leading-relaxed text-sand-700">Written testimonial about Miriam's steady guidance while retaining ownership of her own direction.</p>
-      </article>
+      <figure class="m-0 mt-8 border-t-2 border-turtle-800 bg-sand-50 p-6 md:max-w-xl">
+        <p class="text-xs font-semibold uppercase tracking-wide text-sand-700">In their words</p>
+        <blockquote class="m-0 mt-3 break-words text-base leading-relaxed text-turtle-950">
+          <p class="m-0">&ldquo;If I am the captain of my life ship, then Miriam was and is the indispensable pilot... she showed me how I can steer my ship myself.&rdquo;</p>
+        </blockquote>
+        <figcaption class="mt-3 text-sm text-sand-700">Anna, coaching client</figcaption>
+      </figure>
     </div>
   </section>
 

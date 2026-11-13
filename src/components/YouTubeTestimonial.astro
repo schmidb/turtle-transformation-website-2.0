@@ -9,9 +9,11 @@ interface Props {
   videoId: string;
   /** Local thumbnail base name in /public/images, without extension (expects .webp and .jpg). */
   thumb: string;
+  /** Optional verbatim quotes from the video, rendered as static text under the caption. */
+  quotes?: string[];
 }
 
-const { name, videoId, thumb } = Astro.props;
+const { name, videoId, thumb, quotes = [] } = Astro.props;
 ---
 
 <figure class="video-testimonial m-0" data-youtube-testimonial data-video-id={videoId} data-name={name}>
@@ -47,6 +49,17 @@ const { name, videoId, thumb } = Astro.props;
     <p class="text-sm font-semibold text-turtle-950">{name}</p>
     <p class="mt-0.5 text-xs text-sand-600">Video testimonial &middot; plays via YouTube</p>
   </figcaption>
+  {quotes.length > 0 && (
+    <div class="mt-4 border-l-2 border-turtle-800 pl-4">
+      <p class="text-xs font-semibold uppercase tracking-wide text-sand-700">In their words</p>
+      {quotes.map((quote) => (
+        <blockquote class="m-0 mt-3 break-words text-base leading-relaxed text-turtle-950">
+          <p class="m-0">&ldquo;{quote}&rdquo;</p>
+        </blockquote>
+      ))}
+      <p class="mt-3 text-sm text-sand-700">{name}, coaching client</p>
+    </div>
+  )}
 </figure>
 
 <script>
